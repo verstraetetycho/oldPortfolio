@@ -1,8 +1,10 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+body {
+    font-family: Lato-Regular;
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: Lato-Black;
+    }
+}
