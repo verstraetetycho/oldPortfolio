@@ -1,5 +1,7 @@
 body {
+  background-color: #f8fafc;
   font-family: Lato-Regular;
+  color: #17161a;
 }
 
 body h1,
@@ -11,8 +13,65 @@ body h6 {
   font-family: Lato-Black;
 }
 
+body .intro {
+  padding-top: 8vh;
+}
+
+body .intro p {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+body .intro p span {
+  color: #d90a2c;
+}
+
+body .intro h1 {
+  font-size: 4em;
+}
+
+body .intro h1 span {
+  color: #d90a2c;
+  text-transform: lowercase;
+}
+
+body .intro .countgroup .count {
+  width: 100px;
+  border-top: 1px solid rgba(23, 22, 26, 0.2);
+  padding-top: 25px;
+  margin-right: 25px;
+  float: left;
+}
+
+body .intro .countgroup .count h3 {
+  font-size: 2.3em;
+  display: block;
+}
+
+body .intro img {
+  width: 100%;
+}
+
 body .container-lg {
   max-width: 95%;
+}
+
+body .container {
+  max-width: 80%;
+}
+
+body .dark-back {
+  background: #1a191d;
+  color: #f8fafc;
+}
+
+body section {
+  margin-top: 15vh;
+}
+
+body .v-flexer {
+  display: flex;
+  align-items: center;
 }
 
 body .nav-container {
@@ -20,9 +79,33 @@ body .nav-container {
   position: fixed;
   height: 100vh;
   width: 100%;
-  z-index: 98;
+  z-index: 90;
   background-color: rgba(23, 22, 26, 0.99);
   padding: 70px 0;
+}
+
+body .nav-container .container-lg {
+  z-index: 92;
+  position: fixed;
+  top: 5vh;
+  left: 50px;
+}
+
+body .nav-container .backword {
+  z-index: 91;
+  max-width: 95%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+}
+
+body .nav-container .backword p {
+  font-size: 48em;
+  letter-spacing: 0.1em;
+  font-family: Lato-Black;
+  color: rgba(248, 250, 252, 0.05);
+  line-height: normal;
+  transition: all ease-in-out 0.3s;
 }
 
 body .nav-container ion-icon {
@@ -60,5 +143,55 @@ body .nav-container ul li a {
 body .nav-container ul li a:hover {
   padding-left: 20px;
   color: #d90a2c;
+}
+
+body header {
+  padding: 45px 0;
+}
+
+body header input[type=text] {
+  font-family: Lato-Black;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+body header .menup ion-icon {
+  font-size: 2em;
+  color: #17161a;
+  border: solid transparent 1px;
+  border-radius: 50%;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+body header .menup ion-icon:hover {
+  border: solid #d90a2c 1px;
+}
+
+body header span {
+  font-family: Lato-Black;
+}
+
+body header .btn-danger {
+  float: right;
+  background-color: #d90a2c;
+  max-width: 90%;
+}
+
+body header .btn-danger ion-icon {
+  font-size: 1.5em;
+  padding: 5px 10px;
+}
+
+body header .btn-danger span {
+  padding: 0 10px;
+  border-left: solid rgba(248, 250, 252, 0.5) 1px;
 }
 

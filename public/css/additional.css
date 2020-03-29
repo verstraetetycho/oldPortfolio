@@ -7,3 +7,14 @@
     font-family: Lato-Regular;
     src: url('../fonts/Lato-Regular.ttf') format("truetype");
 }
+
+body {
+    background: url('../images/background.png') center center;
+    background-size: cover;
+}
+
+header input[type=text] {
+    background-image: url('../images/searchicon.png');
+    background-position: 10px 13px; 
+    background-repeat: no-repeat;
+}

@@ -24,27 +24,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="nav-container">
-            <div class="container-lg">
-                <div class="row">
-                    <nav class="col-12">
-                        <ion-icon name="close-outline"></ion-icon>
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Skills</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        <header>
-            <div class="container-lg">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
-        </header>
+        <navigation></navigation>
 
         <main class="py-4">
             @yield('content')

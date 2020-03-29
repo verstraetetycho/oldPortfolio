@@ -2,14 +2,71 @@
 @import 'variables';
 
 body {
+    background-color: $light-grey;
     font-family: Lato-Regular;
+    color: $black;
 
     h1,h2,h3,h4,h5,h6 {
         font-family: Lato-Black;
     }
 
+    .intro {
+        padding-top: 8vh;
+        p {
+            font-size: 1.1em;
+            font-weight: bold;
+            span {
+                color: $red;
+            }
+        }
+        
+        h1 {
+            font-size: 4em;
+            span {
+            color: $red;
+            text-transform: lowercase;
+            }
+        }
+
+        .countgroup {
+            .count{
+                width: 100px;
+                border-top: 1px solid rgba(23,22,26,.2);
+                padding-top: 25px;
+                margin-right: 25px;
+                float: left;
+                h3 {
+                    font-size: 2.3em;
+                    display: block;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
     .container-lg {
         max-width: 95%;
+    }
+
+    .container {
+        max-width: 80%;
+    }
+
+    .dark-back {
+        background: $dark;
+        color: $light-grey;
+    }
+
+    section {
+        margin-top: 15vh;
+    }
+
+    .v-flexer {
+        display: flex;
+        align-items: center;
     }
 
     .nav-container {
@@ -17,9 +74,33 @@ body {
         position: fixed;
         height: 100vh;
         width: 100%;
-        z-index: 98;
+        z-index: 90;
         background-color: rgba($color: $black, $alpha: 0.99);
         padding: 70px 0;
+
+        .container-lg {
+            z-index: 92;
+            position: fixed;
+            top: 5vh;
+            left: 50px;
+        }
+
+        .backword {
+            z-index: 91;
+            max-width: 95%;
+            margin: auto;
+            position: fixed;
+            top: 0;
+
+            p {
+                font-size: 48em;
+                letter-spacing: 0.1em;
+                font-family: Lato-Black;
+                color: rgba($color: $light-grey, $alpha: 0.05);
+                line-height: normal;
+                transition: all ease-in-out .3s;
+            }
+        }
 
         ion-icon {
             font-size: 2em;
@@ -53,6 +134,50 @@ body {
                     padding-left: 20px;
                     color: $red;
                 }
+            }
+        }
+    }
+    header {
+        padding: 45px 0;
+        input[type=text] {
+            font-family: Lato-Black;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: transparent;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        .menup ion-icon {
+            font-size: 2em;
+            color: $black;
+            border: solid transparent 1px;
+            border-radius: 50%;
+            padding: 10px;
+            transition: ease-in-out .3s;
+            cursor: pointer;
+        }
+        .menup ion-icon:hover {
+            border: solid $red 1px;
+        }
+        span {
+            font-family: Lato-Black;
+        }
+
+        .btn-danger {
+            float: right;
+            background-color: $red;
+            max-width: 90%;
+            ion-icon {
+                font-size: 1.5em;
+                padding: 5px 10px;
+            }
+            span {
+                padding: 0 10px;
+                border-left: solid rgba($color: $light-grey, $alpha: 0.5) 1px;
             }
         }
     }
