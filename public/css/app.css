@@ -11,3 +11,54 @@ body h6 {
   font-family: Lato-Black;
 }
 
+body .container-lg {
+  max-width: 95%;
+}
+
+body .nav-container {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 98;
+  background-color: rgba(23, 22, 26, 0.99);
+  padding: 70px 0;
+}
+
+body .nav-container ion-icon {
+  font-size: 2em;
+  color: #f8fafc;
+  border: solid transparent 1px;
+  border-radius: 50%;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+body .nav-container ion-icon:hover {
+  border: solid #d90a2c 1px;
+}
+
+body .nav-container ul {
+  margin-top: 15vh;
+  padding: 0;
+}
+
+body .nav-container ul li {
+  list-style-type: none;
+  padding-bottom: 1em;
+}
+
+body .nav-container ul li a {
+  font-family: Lato-Black;
+  text-decoration: none;
+  color: rgba(248, 250, 252, 0.5);
+  font-size: 3em;
+  transition: all ease-in-out 0.3s;
+}
+
+body .nav-container ul li a:hover {
+  padding-left: 20px;
+  color: #d90a2c;
+}
+

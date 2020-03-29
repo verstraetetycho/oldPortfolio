@@ -7,4 +7,53 @@ body {
     h1,h2,h3,h4,h5,h6 {
         font-family: Lato-Black;
     }
+
+    .container-lg {
+        max-width: 95%;
+    }
+
+    .nav-container {
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        z-index: 98;
+        background-color: rgba($color: $black, $alpha: 0.99);
+        padding: 70px 0;
+
+        ion-icon {
+            font-size: 2em;
+            color: $light-grey;
+            border: solid transparent 1px;
+            border-radius: 50%;
+            padding: 10px;
+            transition: ease-in-out .3s;
+            cursor: pointer;
+        }
+
+        ion-icon:hover {
+            border: solid $red 1px;
+        }
+        ul {
+            margin-top: 15vh;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                padding-bottom: 1em;
+
+                a {
+                    font-family: Lato-Black;
+                    text-decoration: none;
+                    color: rgba($color: $light-grey, $alpha: 0.5);
+                    font-size: 3em;
+                    transition: all ease-in-out 0.3s;
+                }
+                a:hover {
+                    padding-left: 20px;
+                    color: $red;
+                }
+            }
+        }
+    }
 }
