@@ -8,6 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Tycho Verstraete</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
@@ -15,6 +17,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/scrollify.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
 
     <!-- Styles -->
@@ -24,6 +27,7 @@
 </head>
 <body>
     <div id="app">
+        <load></load>
         <navigation></navigation>
 
         <main class="py-4">

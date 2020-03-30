@@ -16,6 +16,23 @@ $('.nav-container ul li a').mouseout(function() {
     $('#menuWord').text('');
 });
 
+let position = $(window).scrollTop();
+$(window).scroll(function() {
+    let scroll = $(window).scrollTop();
+    if(scroll > position) {
+		// scroll down
+		$('header').addClass('panel-nav');
+    } else {
+		// scroll up
+         if (scroll == position) {
+			$('header').removeClass('panel-nav');
+		 }
+    }
+});
+
+// Typing animation
+// https://codepen.io/hi-im-si/pen/DHoup
+
 let TxtType = function(el, toRotate, period) {
 	this.toRotate = toRotate;
 	this.el = el;
@@ -25,9 +42,6 @@ let TxtType = function(el, toRotate, period) {
 	this.tick();
 	this.isDeleting = false;
 };
-
-// Typing animation
-// https://codepen.io/hi-im-si/pen/DHoup
 
 TxtType.prototype.tick = function() {
 	let i = this.loopNum % this.toRotate.length;
@@ -98,3 +112,36 @@ $('.counter').each(function() {
     });
   
   });
+
+// Scrollify
+$.scrollify({
+	section: '.panel',
+	sectionName: 'section-name',
+	interstitialSection: '',
+	easing: 'easeOutExpo',
+	scrollSpeed: 500,
+	offset: 0,
+	scrollbars: false,
+	standardScrollElements: '',
+	setHeights: true,
+	overflowScroll: true,
+	updateHash: true,
+	touchScroll: true,
+	before: function() {},
+	after: function() {
+		let classList = $.scrollify.current()[0].classList;
+		if (classList.contains('dark-back')) {
+			$('header').addClass('dark-back');
+		}
+		else {
+			$('header').removeClass('dark-back');
+		}
+		
+	},
+	afterResize: function() {},
+	afterRender: function() {}
+});
+
+setTimeout(function(){
+	$('#loading-wrap').fadeOut(1000);
+  }, 2000);

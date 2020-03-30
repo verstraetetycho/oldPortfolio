@@ -8,7 +8,7 @@
     src: url('../fonts/Lato-Regular.ttf') format("truetype");
 }
 
-body {
+.panel {
     background: url('../images/background.png') center center;
     background-size: cover;
 }

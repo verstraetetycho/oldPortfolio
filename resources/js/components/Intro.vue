@@ -1,5 +1,5 @@
 <template>
-    <div class="container intro">
+    <div class="container intro panel">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <p><span>Hi,</span> I'm Tycho Verstraete</p>
