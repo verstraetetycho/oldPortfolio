@@ -4,7 +4,7 @@
             <div class="col-md-6">
                 <p><span>Hi,</span> I'm Tycho Verstraete</p>
                 <h1>I would like to <br>
-                <span class="typewrite" data-period="1000" data-type='[ "Make a website",  "Automate a project", "Design anything", "Create a beat" ]'></span> <br>
+                <span class="typewrite" data-period="1000" data-type='[ "Make a website",  "Automate a project", "Design something", "Create a beat" ]'></span> <br>
                 for you</h1>
                 <div class="countgroup">
                     <div class="count">

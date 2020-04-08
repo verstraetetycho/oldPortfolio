@@ -125,7 +125,7 @@ $.scrollify({
 	standardScrollElements: '',
 	setHeights: true,
 	overflowScroll: true,
-	updateHash: true,
+	updateHash: false,
 	touchScroll: true,
 	before: function() {},
 	after: function() {
@@ -141,7 +141,3 @@ $.scrollify({
 	afterResize: function() {},
 	afterRender: function() {}
 });
-
-setTimeout(function(){
-	$('#loading-wrap').fadeOut(1000);
-  }, 2000);

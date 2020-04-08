@@ -1,3 +1,10 @@
+@if (\Request::is('home'))
+<!-- Redirect issue voor login dat automatisch naar /home gaat -->
+<script type="text/javascript">
+    window.location = "{{ route('home') }}";
+</script>
+@endif
+
 @extends('layouts.app')
 
 @section('content')
@@ -5,13 +12,13 @@
     
 </intro>
 
-<section class="dark-back panel v-flexer" data-section-name="about">
+<section class="panel v-flexer" data-section-name="about">
     <div class="container">
         <h2>Get to know me</h2>
     </div>
 </section>
 
-<section class="panel">
+<section class="dark-back panel">
 
 </section>
 
