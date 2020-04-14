@@ -7,6 +7,10 @@ use App\Project;
 
 class ProjectController extends Controller
 {
+    public function index()
+    {
+        return view('pages.portfolio');
+    }
     public function projects()
     {
         return response()->json(Project::get(), 200);

@@ -12,13 +12,10 @@
 
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>    
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js" defer></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/scrollify.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
@@ -29,13 +26,20 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        @include('partials.nav')
-        <navigation></navigation>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+    <header>
+        <div class="container-lg">
+            <div class="row v-flexer">
+                <a href="{{ route('home') }}">
+                    <div class="menup v-flexer">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        <span>Home</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="py-4">
+        @yield('content')
+    </main>
 </body>
 </html>

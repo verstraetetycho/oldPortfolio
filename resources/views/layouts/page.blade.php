@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Tycho Verstraete</title>
+    <title>Tycho Verstraete | {{  ucfirst(Route::currentRouteName()) }}</title>
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
 
 
@@ -30,10 +30,16 @@
 </head>
 <body>
     <div id="app">
-        @include('partials.nav')
+    @include('partials.nav')
         <navigation></navigation>
 
         <main class="py-4">
+        <div class="banner-intro">
+            <div class="container">
+                <h1>{{  ucfirst(Route::currentRouteName()) }}</h1>
+                <div class="v-flexer"><a href="{{ route('home') }}"><ion-icon name="home"></ion-icon></a> <ion-icon name="chevron-forward"></ion-icon> <span>{{  ucfirst(Route::currentRouteName()) }}</span></div>
+            </div>
+        </div>
             @yield('content')
         </main>
     </div>

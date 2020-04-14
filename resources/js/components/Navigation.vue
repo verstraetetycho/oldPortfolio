@@ -13,7 +13,7 @@
                         <input type="text" name="search" placeholder="Search for something...">
                     </div>
                     <div class="col-2">
-                        <a href="#" class="btn btn-danger v-flexer"><ion-icon name="mail-outline"></ion-icon> <span>Contact</span></a>
+                        <a href="#" class="btn btn-danger v-flexer"><ion-icon name="mail"></ion-icon> <span>Contact</span></a>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,9 @@
+*:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 body {
   background-color: #f8fafc;
   font-family: Lato-Regular;
@@ -23,12 +29,14 @@ body .loginContainer h1 {
 
 body .loginForm input {
   padding: 25px;
+  background-color: transparent;
 }
 
 body .loginForm input:focus {
   outline: none !important;
   border: 1px solid #d90a2c;
-  box-shadow: 0 0 10px rgba(217, 10, 44, 0.5);
+  box-shadow: 0 0 5px rgba(217, 10, 44, 0.2);
+  background-color: rgba(248, 250, 252, 0.7);
 }
 
 body .loginForm button {
@@ -98,6 +106,81 @@ body .dark-back ion-icon {
 
 body .dark-back input {
   color: #f8fafc;
+}
+
+body .grid {
+  padding-top: 50px;
+}
+
+body .grid .grid-item {
+  width: 32%;
+}
+
+body .grid .grid-item {
+  position: relative;
+  text-align: center;
+  float: left;
+  padding: 10px;
+  margin: 5px;
+}
+
+body .grid .grid-item .technologie {
+  text-transform: capitalize;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: solid #d90a2c 1px;
+  color: #d90a2c;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+body .grid .grid-item .technologie ion-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+body .grid .grid-item .project-titel {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  color: #1a191d;
+  transition: ease-in-out 0.5s;
+}
+
+body .grid .grid-item img {
+  width: 100%;
+}
+
+body .grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body .banner-intro {
+  margin-top: 15vh;
+  padding: 2em 0;
+  margin-bottom: 2em;
+  background-color: #e7e7e7;
+}
+
+body .banner-intro h1 {
+  font-size: 4em;
+}
+
+body .banner-intro a {
+  color: #d90a2c;
+}
+
+body .banner-intro ion-icon,
+body .banner-intro span {
+  font-size: 1.5em;
+}
+
+body .is-checked {
+  border-color: #d90a2c;
+  color: #d90a2c;
 }
 
 body section.dark-back {
@@ -194,6 +277,7 @@ body header {
   width: 100%;
   padding: 45px 0;
   transition: all ease-in-out 0.3s;
+  z-index: 3;
 }
 
 body header input[type=text] {
@@ -224,6 +308,15 @@ body header .menup ion-icon:hover {
 
 body header span {
   font-family: Lato-Black;
+}
+
+body header a {
+  color: #1a191d;
+}
+
+body header a:hover {
+  text-decoration: none;
+  color: #1a191d;
 }
 
 body header .btn-danger {

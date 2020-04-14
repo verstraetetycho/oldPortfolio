@@ -20,6 +20,7 @@ window.Vue = require('vue');
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('intro', require('./components/Intro.vue').default);
 Vue.component('navigation', require('./components/Navigation.vue').default);
+Vue.component('projects', require('./components/Projects.vue').default);
 
 
 /**

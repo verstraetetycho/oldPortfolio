@@ -1,6 +1,11 @@
 // Variables
 @import 'variables';
 
+*:focus, button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 body {
     background-color: $light-grey;
     font-family: Lato-Regular;
@@ -20,11 +25,13 @@ body {
     .loginForm {
         input {
             padding: 25px;
+            background-color: transparent;
         }
         input:focus {
             outline: none !important;
             border: 1px solid $red;
-            box-shadow: 0 0 10px rgba($color: $red, $alpha: .5);
+            box-shadow: 0 0 5px rgba($color: $red, $alpha: .2);
+            background-color: rgba($color: $light-grey, $alpha: .7);
         }
         button {
             background-color: $red;
@@ -91,6 +98,72 @@ body {
         input {
             color: $light-grey;
         }
+    }
+
+    .grid {
+        padding-top: 50px;
+        .grid-item { 
+            width: 32%;
+        }
+        .grid-item {
+            position: relative;
+            text-align: center;
+            float: left;
+            padding: 10px;
+            margin: 5px;
+            .technologie {
+                text-transform: capitalize;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                border: solid $red 1px;
+                color: $red;
+                padding: 5px 10px;
+                border-radius: 10px;
+                ion-icon {
+                    font-size: 1.5em;
+                    margin-right: 10px;
+                }
+            }
+            .project-titel {
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+                color: $dark;
+                transition: ease-in-out .5s;
+
+                
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .banner-intro {
+        margin-top: 15vh;
+        padding: 2em 0;
+        margin-bottom: 2em;
+        background-color: $darker-grey;
+        h1 {
+            font-size: 4em;
+        }
+        a {
+            color: $red;
+        }
+        ion-icon, span{
+            font-size: 1.5em;
+        }
+    }
+
+    .is-checked {
+        border-color: $red;
+        color: $red;
     }
 
     section.dark-back {
@@ -183,6 +256,7 @@ body {
         width: 100%;
         padding: 45px 0;
         transition: all ease-in-out .3s;
+        z-index: 3;
         input[type=text] {
             font-family: Lato-Black;
             width: 100%;
@@ -209,6 +283,13 @@ body {
         }
         span {
             font-family: Lato-Black;
+        }
+        a{
+            color: $dark;
+        }
+        a:hover {
+            text-decoration: none;
+            color: $dark;
         }
 
         .btn-danger {

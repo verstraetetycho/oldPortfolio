@@ -18,3 +18,8 @@ header input[type=text] {
     background-position: 10px 13px; 
     background-repeat: no-repeat;
 }
+
+.banner-intro {
+    background-image: url('../images/background.png');
+    background-size: cover;
+}

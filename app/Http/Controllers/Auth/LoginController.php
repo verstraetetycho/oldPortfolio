@@ -56,11 +56,12 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($request->only($login_type, 'password'))) {
-            return redirect()->intended('home');
+            return redirect()->intended('admin');
         } else {
             return redirect()->back()
-                ->with([
-                    'login' => 'These credentials do not match our records.',
+                ->withErrors([
+                    'login' => ' ',
+                    'password' => 'These credentials do not match our records.',
                 ]);
         }
     }
