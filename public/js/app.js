@@ -130,7 +130,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       for (var i = 1; i < 4; i++) {
-        fetch("api/projects/".concat(i)).then(function (res) {
+        var temp = Math.floor(Math.random() * 8 + 1);
+        fetch("api/projects/".concat(temp)).then(function (res) {
           return res.json();
         }).then(function (res) {
           _this.projects.push(res);

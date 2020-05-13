@@ -32,7 +32,8 @@ export default {
     methods: {
         fetchArticles() {
             for (let i = 1; i < 4; i++) {
-                fetch(`api/projects/${i}`)
+                let temp = Math.floor((Math.random() * 8) + 1);
+                fetch(`api/projects/${temp}`)
                 .then(res => res.json())
                 .then(res => {
                     this.projects.push(res);
