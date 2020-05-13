@@ -15,4 +15,8 @@ class ProjectController extends Controller
     {
         return response()->json(Project::get(), 200);
     }
+    public function project($id)
+    {
+        return response()->json(Project::find($id), 200);
+    }
 }

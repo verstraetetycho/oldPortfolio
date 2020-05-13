@@ -20,7 +20,6 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js" defer></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/scrollify.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
 
     <!-- Styles -->
@@ -36,6 +35,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+        @include('partials.footer')
     </div>
 </body>
 </html>

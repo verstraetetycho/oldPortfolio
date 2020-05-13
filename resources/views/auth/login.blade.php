@@ -3,7 +3,7 @@
 @section('content')
 <div class="panel v-flexer justify-content-center">
     <div class="loginContainer">
-        <h1>Login</h1>
+        <h2>Login</h2>
                 <form class="loginForm" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="form-group row">

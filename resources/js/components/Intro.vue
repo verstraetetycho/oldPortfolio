@@ -1,11 +1,9 @@
 <template>
     <div class="container intro panel">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <p><span>Hi,</span> I'm Tycho Verstraete</p>
-                <h1>I would like to <br>
-                <span class="typewrite" data-period="1000" data-type='[ "Make a website",  "Automate a project", "Design something", "Create a beat" ]'></span> <br>
-                for you</h1>
+            <div class="col-md-7">
+                <h1>Hello<span>.</span></h1>
+                <p>My name is <span>Tycho Verstraete</span>. I’m a software engineer and a designer, heres is my portfolio. Have a look.</p>
                 <div class="countgroup">
                     <div class="count">
                         <h3 class="counter" data-count="10">0</h3>
@@ -21,8 +19,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="images/frame-laptop.png" alt="Laptop">
+            <div class="col-md-5">
+                <img src="images/01_img.jpg" alt="foto">
             </div>
         </div>
     </div>

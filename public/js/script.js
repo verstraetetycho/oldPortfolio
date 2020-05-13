@@ -113,35 +113,6 @@ $('.counter').each(function() {
   
   });
 
-// Scrollify
-$.scrollify({
-	section: '.panel',
-	sectionName: 'section-name',
-	interstitialSection: '',
-	easing: 'easeOutExpo',
-	scrollSpeed: 500,
-	offset: 0,
-	scrollbars: false,
-	standardScrollElements: '',
-	setHeights: true,
-	overflowScroll: true,
-	updateHash: false,
-	touchScroll: true,
-	before: function() {},
-	after: function() {
-		let classList = $.scrollify.current()[0].classList;
-		if (classList.contains('dark-back')) {
-			$('header').addClass('dark-back');
-		}
-		else {
-			$('header').removeClass('dark-back');
-		}
-		
-	},
-	afterResize: function() {},
-	afterRender: function() {}
-});
-
 // Masonry
 let $grid = $('.grid').masonry({
 	// set itemSelector so .grid-sizer is not used in layout

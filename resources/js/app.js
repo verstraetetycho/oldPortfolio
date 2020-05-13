@@ -21,7 +21,7 @@ window.Vue = require('vue');
 Vue.component('intro', require('./components/Intro.vue').default);
 Vue.component('navigation', require('./components/Navigation.vue').default);
 Vue.component('projects', require('./components/Projects.vue').default);
-
+Vue.component('featuredprojects', require('./components/FeaturedProjects.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

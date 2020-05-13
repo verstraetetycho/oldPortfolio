@@ -7,6 +7,18 @@
 }
 
 body {
+    h1 {
+        font-size: 15em;
+    }
+    h2 {
+        font-size: 5em;
+    }
+    h3 {
+        font-size: 2.5em;
+    }
+    span {
+        color: $red;
+    }
     background-color: $light-grey;
     font-family: Lato-Regular;
     color: $black;
@@ -19,6 +31,19 @@ body {
         width: 400px;
         h1 {
             margin-bottom: 30px;
+        }
+    }
+
+    .contpanel {
+        margin-top: 2vh;
+        border-top: solid $darker-grey 2px;
+        border-bottom: solid $darker-grey 2px;
+        width: 100%;
+        text-align: center;
+        padding: 10vh 0;
+        button {
+            margin-top: 20px;
+            padding: 15px 40px;
         }
     }
 
@@ -48,17 +73,6 @@ body {
         p {
             font-size: 1.1em;
             font-weight: bold;
-            span {
-                color: $red;
-            }
-        }
-        
-        h1 {
-            font-size: 4em;
-            span {
-            color: $red;
-            text-transform: lowercase;
-            }
         }
 
         .countgroup {
@@ -76,6 +90,7 @@ body {
         }
 
         img {
+            float: right;
             width: 100%;
         }
     }
@@ -125,15 +140,6 @@ body {
                     margin-right: 10px;
                 }
             }
-            .project-titel {
-                position: absolute;
-                left: 30px;
-                bottom: 30px;
-                color: $dark;
-                transition: ease-in-out .5s;
-
-                
-            }
             img {
                 width: 100%;
             }
@@ -149,9 +155,11 @@ body {
         margin-top: 15vh;
         padding: 2em 0;
         margin-bottom: 2em;
-        background-color: $darker-grey;
         h1 {
-            font-size: 4em;
+            font-size: 15em;
+            span {
+                color:$red;
+            }
         }
         a {
             color: $red;
@@ -160,11 +168,14 @@ body {
             font-size: 1.5em;
         }
     }
-
-    .is-checked {
-        border-color: $red;
-        color: $red;
+    .filter-button-group {
+        width: 100%;
+        text-align: center;
+        .is-checked {
+            color: $red;
+        }
     }
+    
 
     section.dark-back {
         background-color: $dark !important;
@@ -301,6 +312,7 @@ body {
                 padding: 5px 10px;
             }
             span {
+                color: $light-grey;
                 padding: 0 10px;
                 border-left: solid rgba($color: $light-grey, $alpha: 0.5) 1px;
             }
@@ -311,5 +323,36 @@ body {
         background-color: $light-grey;
         padding: 12px 0;
         box-shadow: 0px 0px 5px rgba($color: $black, $alpha: 0.3);
+    }
+
+    .panel {
+        height: 100vh;
+    }
+    #projects {
+        overflow: hidden;
+    }
+
+    footer {
+        margin-top: 2vh;
+        background-color: $darker-grey;
+        clear: both;
+        width: 100%;
+        padding: 30px 0;
+        a {
+            color: $red;
+        }
+        div+div {
+            text-align: right;
+        }
+        .logos {
+            font-size: 30px;
+            a {
+                color: $dark;
+                margin-left: 10px;
+            }
+            a:hover {
+                color: $red;
+            }
+        }
     }
 }

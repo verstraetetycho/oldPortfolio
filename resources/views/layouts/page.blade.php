@@ -20,7 +20,6 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js" defer></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/scrollify.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
 
     <!-- Styles -->
@@ -36,8 +35,7 @@
         <main class="py-4">
         <div class="banner-intro">
             <div class="container">
-                <h1>{{  ucfirst(Route::currentRouteName()) }}</h1>
-                <div class="v-flexer"><a href="{{ route('home') }}"><ion-icon name="home"></ion-icon></a> <ion-icon name="chevron-forward"></ion-icon> <span>{{  ucfirst(Route::currentRouteName()) }}</span></div>
+                <h1>{{  ucfirst(Route::currentRouteName()) }}<span>.</span></h1>
             </div>
         </div>
             @yield('content')

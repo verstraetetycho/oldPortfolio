@@ -10,6 +10,22 @@ body {
   color: #17161a;
 }
 
+body h1 {
+  font-size: 15em;
+}
+
+body h2 {
+  font-size: 5em;
+}
+
+body h3 {
+  font-size: 2.5em;
+}
+
+body span {
+  color: #d90a2c;
+}
+
 body h1,
 body h2,
 body h3,
@@ -25,6 +41,20 @@ body .loginContainer {
 
 body .loginContainer h1 {
   margin-bottom: 30px;
+}
+
+body .contpanel {
+  margin-top: 2vh;
+  border-top: solid #e7e7e7 2px;
+  border-bottom: solid #e7e7e7 2px;
+  width: 100%;
+  text-align: center;
+  padding: 10vh 0;
+}
+
+body .contpanel button {
+  margin-top: 20px;
+  padding: 15px 40px;
 }
 
 body .loginForm input {
@@ -58,19 +88,6 @@ body .intro p {
   font-weight: bold;
 }
 
-body .intro p span {
-  color: #d90a2c;
-}
-
-body .intro h1 {
-  font-size: 4em;
-}
-
-body .intro h1 span {
-  color: #d90a2c;
-  text-transform: lowercase;
-}
-
 body .intro .countgroup .count {
   width: 100px;
   border-top: 1px solid rgba(23, 22, 26, 0.2);
@@ -85,6 +102,7 @@ body .intro .countgroup .count h3 {
 }
 
 body .intro img {
+  float: right;
   width: 100%;
 }
 
@@ -140,14 +158,6 @@ body .grid .grid-item .technologie ion-icon {
   margin-right: 10px;
 }
 
-body .grid .grid-item .project-titel {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  color: #1a191d;
-  transition: ease-in-out 0.5s;
-}
-
 body .grid .grid-item img {
   width: 100%;
 }
@@ -162,11 +172,14 @@ body .banner-intro {
   margin-top: 15vh;
   padding: 2em 0;
   margin-bottom: 2em;
-  background-color: #e7e7e7;
 }
 
 body .banner-intro h1 {
-  font-size: 4em;
+  font-size: 15em;
+}
+
+body .banner-intro h1 span {
+  color: #d90a2c;
 }
 
 body .banner-intro a {
@@ -178,8 +191,12 @@ body .banner-intro span {
   font-size: 1.5em;
 }
 
-body .is-checked {
-  border-color: #d90a2c;
+body .filter-button-group {
+  width: 100%;
+  text-align: center;
+}
+
+body .filter-button-group .is-checked {
   color: #d90a2c;
 }
 
@@ -331,6 +348,7 @@ body header .btn-danger ion-icon {
 }
 
 body header .btn-danger span {
+  color: #f8fafc;
   padding: 0 10px;
   border-left: solid rgba(248, 250, 252, 0.5) 1px;
 }
@@ -339,5 +357,42 @@ body .panel-nav {
   background-color: #f8fafc;
   padding: 12px 0;
   box-shadow: 0px 0px 5px rgba(23, 22, 26, 0.3);
+}
+
+body .panel {
+  height: 100vh;
+}
+
+body #projects {
+  overflow: hidden;
+}
+
+body footer {
+  margin-top: 2vh;
+  background-color: #e7e7e7;
+  clear: both;
+  width: 100%;
+  padding: 30px 0;
+}
+
+body footer a {
+  color: #d90a2c;
+}
+
+body footer div + div {
+  text-align: right;
+}
+
+body footer .logos {
+  font-size: 30px;
+}
+
+body footer .logos a {
+  color: #1a191d;
+  margin-left: 10px;
+}
+
+body footer .logos a:hover {
+  color: #d90a2c;
 }
 
