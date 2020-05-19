@@ -16,9 +16,15 @@ body {
     h3 {
         font-size: 2.5em;
     }
-    span {
-        color: $red;
+
+    h1, h2 {
+        span {
+            background: linear-gradient(to left, red, $red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
+
     background-color: $light-grey;
     font-family: Lato-Regular;
     color: $black;
@@ -60,6 +66,9 @@ body {
             line-height: 1;
         }
         a:hover {
+            background: linear-gradient(to left, red, $red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-decoration: none;
         }
     }
@@ -76,7 +85,7 @@ body {
             background-color: rgba($color: $light-grey, $alpha: .7);
         }
         button {
-            background-color: $red;
+            background: linear-gradient(to left, red, $red);
             border: $red;
         }
         .btn {
@@ -102,6 +111,9 @@ body {
                 h3 {
                     font-size: 2.3em;
                     display: block;
+                    background: linear-gradient(to left, red, $red);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
         }
@@ -193,9 +205,33 @@ body {
         }
     }
 
-    .dark-back .card {
-        background-color: $black;
-        padding: 2em;
+    .socio-panel {
+        padding: 30px;
+        iframe {
+            width: 100%;
+        }
+        h3 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 1.3em;
+
+            ion-icon {
+                font-size: 2em;
+                margin-right: 10px;
+            }
+        }
+        a {
+            color: $dark;
+        }
+        a:hover {
+            background: linear-gradient(to left, red, $red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+    
     }
     
     #skills {
@@ -290,6 +326,17 @@ body {
             }
         }
     }
+
+    #about-text{ 
+        h2{
+            margin-bottom: 50px;
+        }
+        p{
+            color: $dark;
+            font-size: 1.2em;
+        }
+    }
+
     header {
         position: fixed;
         width: 100%;
@@ -330,10 +377,8 @@ body {
             text-decoration: none;
             color: $dark;
         }
-
         .btn-danger {
             float: right;
-            background-color: $red;
             max-width: 90%;
             ion-icon {
                 font-size: 1.5em;
@@ -345,6 +390,9 @@ body {
                 border-left: solid rgba($color: $light-grey, $alpha: 0.5) 1px;
             }
         }
+    }
+    .btn-danger {
+        background: linear-gradient(to left, red, $red);
     }
       
       .skills {
@@ -463,7 +511,12 @@ body {
         width: 100%;
         padding: 30px 0;
         a {
-            color: $red;
+            color: $dark;
+        }
+        a:hover {
+            background: linear-gradient(to left, red, $red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         div+div {
             text-align: right;
@@ -471,7 +524,6 @@ body {
         .logos {
             font-size: 30px;
             a {
-                color: $dark;
                 margin-left: 10px;
             }
             a:hover {

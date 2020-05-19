@@ -18,5 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/projects', 'ProjectController@projects');
-Route::get('/projects/{id}', 'ProjectController@project');
+Route::get('/projects', 'ApiController@projects');
+Route::get('/projects/{id}', 'ApiController@project');
+Route::get('/technologies', 'ApiController@technologies');
+Route::get('/categories', 'ApiController@categories');

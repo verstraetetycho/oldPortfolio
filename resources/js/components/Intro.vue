@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <img src="images/01_img.jpg" alt="foto">
+                <img src="images/portrait.jpg" alt="foto">
             </div>
         </div>
     </div>

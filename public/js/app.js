@@ -129,14 +129,23 @@ __webpack_require__.r(__webpack_exports__);
     fetchArticles: function fetchArticles() {
       var _this = this;
 
-      for (var i = 1; i < 4; i++) {
-        var temp = Math.floor(Math.random() * 8 + 1);
-        fetch("api/projects/".concat(temp)).then(function (res) {
+      var arr = [];
+
+      do {
+        var num = Math.floor(Math.random() * 8 + 1);
+        arr.push(num);
+        arr = arr.filter(function (item, index) {
+          return arr.indexOf(item) === index;
+        });
+      } while (arr.length < 3);
+
+      arr.forEach(function (element) {
+        fetch("api/projects/".concat(element)).then(function (res) {
           return res.json();
         }).then(function (res) {
           _this.projects.push(res);
         });
-      }
+      });
     }
   }
 });
@@ -163,9 +172,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      technologies: [],
       projects: [],
       project: {
         id: '',
@@ -180,7 +195,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    this.fetchArticles();
+    this.fetchArticles(), this.fetchTechnologies();
   },
   methods: {
     fetchArticles: function fetchArticles() {
@@ -190,6 +205,15 @@ __webpack_require__.r(__webpack_exports__);
         return res.json();
       }).then(function (res) {
         _this.projects = res;
+      });
+    },
+    fetchTechnologies: function fetchTechnologies() {
+      var _this2 = this;
+
+      fetch('api/technologies').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.technologies = res;
       });
     }
   }
@@ -800,7 +824,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-5" }, [
-          _c("img", { attrs: { src: "images/01_img.jpg", alt: "foto" } })
+          _c("img", { attrs: { src: "images/portrait.jpg", alt: "foto" } })
         ])
       ])
     ])
@@ -902,46 +926,70 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "grid" },
-    _vm._l(_vm.projects, function(project) {
-      return _c(
+    [
+      _vm._l(_vm.technologies, function(technologie) {
+        return _c(
+          "div",
+          { key: technologie, staticClass: "button-group filter-button-group" },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "btn filter",
+                attrs: { "data-filter": technologie }
+              },
+              [_vm._v('"technologie"')]
+            )
+          ]
+        )
+      }),
+      _vm._v(" "),
+      _c(
         "div",
-        { key: project.id, staticClass: "grid-item", class: project.type },
-        [
-          _c(
-            "a",
-            {
-              attrs: {
-                href:
-                  "portfolio/" + project.titel.toLowerCase().replace(/\s/g, "")
-              }
-            },
-            [
-              _c("img", {
-                attrs: {
-                  src:
-                    "images/" +
-                    project.titel.toLowerCase().replace(/\s/g, "") +
-                    ".jpg",
-                  alt: project.titel
-                }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c(
+        { staticClass: "grid" },
+        _vm._l(_vm.projects, function(project) {
+          return _c(
             "div",
-            { staticClass: "technologie v-flexer" },
+            { key: project.id, staticClass: "grid-item", class: project.type },
             [
-              _c("ion-icon", { attrs: { name: "logo-" + project.type } }),
-              _vm._v(" " + _vm._s(project.titel))
-            ],
-            1
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "portfolio/" +
+                      project.titel.toLowerCase().replace(/\s/g, "")
+                  }
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "images/" +
+                        project.titel.toLowerCase().replace(/\s/g, "") +
+                        ".jpg",
+                      alt: project.titel
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "technologie v-flexer" },
+                [
+                  _c("ion-icon", { attrs: { name: "logo-" + project.type } }),
+                  _vm._v(" " + _vm._s(project.titel))
+                ],
+                1
+              )
+            ]
           )
-        ]
+        }),
+        0
       )
-    }),
-    0
+    ],
+    2
   )
 }
 var staticRenderFns = []

@@ -31,14 +31,23 @@ export default {
     },
     methods: {
         fetchArticles() {
-            for (let i = 1; i < 4; i++) {
-                let temp = Math.floor((Math.random() * 8) + 1);
-                fetch(`api/projects/${temp}`)
+            let arr = [];
+
+            do {
+            let num = Math.floor(Math.random() * 8 + 1);
+            arr.push(num);
+            arr = arr.filter((item, index) => {
+                return arr.indexOf(item) === index
+            });
+            } while (arr.length < 3);
+            
+            arr.forEach(element => {
+                fetch(`api/projects/${element}`)
                 .then(res => res.json())
                 .then(res => {
                     this.projects.push(res);
-                })
-            }
+            })
+            });
             
         }
     }

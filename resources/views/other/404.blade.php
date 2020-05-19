@@ -1,10 +1,10 @@
-@extends('layouts.login')
+@extends('layouts.page')
 
 @section('content')
-    <div class="panel v-flexer justify-content-center">
-        <div>
-            <h1><span>404</span></h1>
-            <h2>This page could not be found</h2>
+    <div class="banner-intro">
+        <div class="container">
+            <h1>404<span>.</span></h1>
+            <h3>This page could not be found</h3>
         </div>
     </div>
 @endsection

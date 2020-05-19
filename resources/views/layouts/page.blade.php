@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Tycho Verstraete | {{  ucfirst(Route::currentRouteName()) }}</title>
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 
 
     <!-- Scripts -->
@@ -33,11 +33,13 @@
         <navigation></navigation>
 
         <main class="py-4">
+        @if (ucfirst(Route::currentRouteName()) != "")
         <div class="banner-intro">
             <div class="container">
-                <h1>{{  ucfirst(Route::currentRouteName()) }}<span>.</span></h1>
+                <h1>{{ ucfirst(Route::currentRouteName()) }}<span>.</span></h1>
             </div>
         </div>
+        @endif
             @yield('content')
         </main>
     @include('partials.footer')

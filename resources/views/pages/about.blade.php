@@ -3,13 +3,14 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h2>Passionate coder / designer</h2>
-                <p>Unde nihil eius repudiandae sequi quos non velit repellendus. Corrupti sit possimus et quaerat tempora. Illo eaque maxime quam et quia maxime quod. Ex est ad architecto blanditiis.
-
-Alias fugit dolore omnis voluptas perferendis repellat. Vitae dolor dolorem eius inventore dolore. Quia dolorum aliquam excepturi et et ullam. Est et fugiat laborum eos animi harum voluptas.</p>
+            <div id="about-text" class="col-md-6">
+                <h2>Passionate <br> coder <span>-</span> designer</h2>
+                <p>
+                    Unde nihil eius repudiandae sequi quos non velit repellendus. Corrupti sit possimus et quaerat tempora. Illo eaque maxime quam et quia maxime quod. Ex est ad architecto blanditiis.
+                    Alias fugit dolore omnis voluptas perferendis repellat. Vitae dolor dolorem eius inventore dolore. Quia dolorum aliquam excepturi et et ullam. Est et fugiat laborum eos animi harum voluptas.
+                </p>
             </div>
-            <div class="col-md-6"><img src="{{ asset('/images/01_img.jpg') }}" alt="foto"></div>
+            <div class="col-md-6"><img src="{{ asset('/images/portrait.jpg') }}" alt="foto"></div>
         </div>
     </div>
     <section id="skills" class="dark-back">

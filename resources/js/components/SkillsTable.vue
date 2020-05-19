@@ -20,7 +20,6 @@ export default {
         return {
             technologies: [],
             projects: [],
-            categories: [],
             project: {
                 id: '',
                 titel: '',
@@ -30,23 +29,12 @@ export default {
                 descr: '',
                 type: '',
                 company: ''
-            },
-            technology: {
-                id: '',
-                name: '',
-                skill_perc: '',
-                type: ''
-            },
-            category: {
-                id: '',
-                type: ''
             }
         }
     },
     created() {
         this.fetchArticles(),
-        this.fetchTechnologies(),
-        this.fetchCategories()
+        this.fetchTechnologies()
     },
     methods: {
         fetchArticles() {
@@ -57,13 +45,6 @@ export default {
             })
         },
         fetchTechnologies() {
-            fetch('api/technologies')
-            .then(res => res.json())
-            .then(res => {
-                this.technologies = res;
-            })
-        },
-        fetchCategories() {
             fetch('api/technologies')
             .then(res => res.json())
             .then(res => {

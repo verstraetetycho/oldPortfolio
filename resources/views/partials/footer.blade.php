@@ -4,20 +4,17 @@
             <div class="col-md-6">2018-<?php echo date("Y") ?> | Created by <a href="#">Tycho Verstraete</a></div>
             <div class="col-md-6">
                 <div class="logos">
-                    <a href="#">
+                    <a href="https://github.com/verstraetetycho/" target="_blank">
                         <ion-icon name="logo-github"></ion-icon>
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/tycho-verstraete-a5ab1b174/" target="_blank">
                         <ion-icon name="logo-linkedin"></ion-icon>
                     </a>
-                    <a href="#">
+                    <a href="https://www.facebook.com/tycho.verstraete" target="_blank">
                         <ion-icon name="logo-facebook"></ion-icon>
                     </a>
-                    <a href="#">
+                    <a href="https://www.youtube.com/channel/UC1OSSW_Y_iH46KogKz4l5oA" target="_blank">
                         <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
-                    <a href="#">
-                        <ion-icon name="logo-instagram"></ion-icon>
                     </a>
                 </div>
             </div>

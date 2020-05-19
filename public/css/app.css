@@ -22,8 +22,11 @@ body h3 {
   font-size: 2.5em;
 }
 
-body span {
-  color: #d90a2c;
+body h1 span,
+body h2 span {
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body h1,
@@ -71,6 +74,9 @@ body .more a ion-icon {
 }
 
 body .more a:hover {
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
 
@@ -87,7 +93,7 @@ body .loginForm input:focus {
 }
 
 body .loginForm button {
-  background-color: #d90a2c;
+  background: linear-gradient(to left, red, #d90a2c);
   border: #d90a2c;
 }
 
@@ -116,6 +122,9 @@ body .intro .countgroup .count {
 body .intro .countgroup .count h3 {
   font-size: 2.3em;
   display: block;
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body .intro img {
@@ -217,9 +226,36 @@ body .filter-button-group .is-checked {
   color: #d90a2c;
 }
 
-body .dark-back .card {
-  background-color: #17161a;
-  padding: 2em;
+body .socio-panel {
+  padding: 30px;
+}
+
+body .socio-panel iframe {
+  width: 100%;
+}
+
+body .socio-panel h3 {
+  margin-bottom: 25px;
+}
+
+body .socio-panel p {
+  font-size: 1.3em;
+}
+
+body .socio-panel p ion-icon {
+  font-size: 2em;
+  margin-right: 10px;
+}
+
+body .socio-panel a {
+  color: #1a191d;
+}
+
+body .socio-panel a:hover {
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 
 body #skills {
@@ -320,6 +356,15 @@ body .nav-container ul li a:hover {
   color: #d90a2c;
 }
 
+body #about-text h2 {
+  margin-bottom: 50px;
+}
+
+body #about-text p {
+  color: #1a191d;
+  font-size: 1.2em;
+}
+
 body header {
   position: fixed;
   width: 100%;
@@ -369,7 +414,6 @@ body header a:hover {
 
 body header .btn-danger {
   float: right;
-  background-color: #d90a2c;
   max-width: 90%;
 }
 
@@ -382,6 +426,10 @@ body header .btn-danger span {
   color: #f8fafc;
   padding: 0 10px;
   border-left: solid rgba(248, 250, 252, 0.5) 1px;
+}
+
+body .btn-danger {
+  background: linear-gradient(to left, red, #d90a2c);
 }
 
 body .skills {
@@ -506,7 +554,13 @@ body footer {
 }
 
 body footer a {
-  color: #d90a2c;
+  color: #1a191d;
+}
+
+body footer a:hover {
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body footer div + div {
@@ -518,7 +572,6 @@ body footer .logos {
 }
 
 body footer .logos a {
-  color: #1a191d;
   margin-left: 10px;
 }
 
