@@ -18,7 +18,6 @@
             <h1>Skills<span>.</span></h1>
             <div class="skills">
                 <ul class="lines">
-                    
                     <li class="line l--25">
                         <span class="line__label">
                             25%
@@ -40,111 +39,7 @@
                         </span>
                     </li>
                 </ul>
-                
-                <div class="charts">
-                    <div class="chart chart--dev">
-                    <span class="chart__title">Development</span>
-                    <ul class="chart--horiz">
-                        <li class="chart__bar" style="width: 96%;">
-                            <span class="chart__label">
-                                HTML5
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 95%;">
-                            <span class="chart__label">
-                                CSS3 & SCSS
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 70%;">
-                            <span class="chart__label">
-                                JavaScript & ES6
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 60%;">
-                            <span class="chart__label">
-                                jQuery
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 69%;">
-                            <span class="chart__label">
-                                NodeJS
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 40%;">
-                            <span class="chart__label">
-                                VueJS
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 71%;">
-                            <span class="chart__label">
-                                PHP & Laravel
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 80%;">
-                            <span class="chart__label">
-                                C# & .NET
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 85%;">
-                            <span class="chart__label">
-                                C++
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 50%;">
-                            <span class="chart__label">
-                                Java
-                            </span>
-                        </li>
-                        <li class="chart__bar" style="width: 67%;">
-                            <span class="chart__label">
-                                Python
-                            </span>
-                        </li>
-                    </ul>
-                    </div>
-                    
-                    <div class="chart chart--prod">
-                    <span class="chart__title">Productivity</span>
-                    <ul class="chart--horiz">
-                    <li class="chart__bar" style="width: 70%;">
-                        <span class="chart__label">
-                        Git + Github
-                        </span>
-                    </li>
-                    <li class="chart__bar" style="width: 49%;">
-                        <span class="chart__label">
-                        Azure devops
-                        </span>
-                    </li>
-                    <li class="chart__bar" style="width: 80%;">
-                        <span class="chart__label">
-                        Microsoft Office
-                        </span>
-                    </li>
-                    </ul>
-                    </div>
-                    
-                    <div class="chart chart--design">
-                    <span class="chart__title">Design</span>
-                    <ul class="chart--horiz">
-                    <li class="chart__bar" style="width: 65%;">
-                        <span class="chart__label">
-                        Photoshop
-                        </span>
-                    </li>
-                    <li class="chart__bar" style="width: 60%;">
-                        <span class="chart__label">
-                        Illustrator
-                        </span>
-                    </li>
-                    <li class="chart__bar" style="width: 60%;">
-                        <span class="chart__label">
-                        After Effects
-                        </span>
-                    </li>
-                    </ul>
-                    </div>
-                </div>
+                <skillz></skillz>
             </div>
         </div>
     </section>
