@@ -21,6 +21,10 @@ class ApiController extends Controller
     {
         return response()->json(Technology::get(), 200);
     }
+    public function technologieByCateg($categ)
+    {
+        return response()->json(Technology::where('type', $categ)->get(), 200);
+    }
     public function categories()
     {
         return response()->json(Category::get(), 200);

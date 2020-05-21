@@ -6,11 +6,11 @@
                 <p>My name is <span>Tycho Verstraete</span>. I’m a software engineer and a designer, heres is my portfolio. Have a look.</p>
                 <div class="countgroup">
                     <div class="count">
-                        <h3 class="counter" data-count="10">0</h3>
+                        <h3 class="counter" :data-count="projects.length">0</h3>
                         <p>Projects done</p>
                     </div>
                     <div class="count">
-                        <h3 class="counter" data-count="03">0</h3>
+                        <h3 class="counter" :data-count="new Date().getFullYear()-2017">0</h3>
                         <p>Years of experience</p>
                     </div>
                     <div class="count">
@@ -25,3 +25,35 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            projects: [],
+            project: {
+                id: '',
+                titel: '',
+                year: '',
+                url: '',
+                smalldescr: '',
+                descr: '',
+                company: '',
+                technologies: ''
+            }
+        }
+    },
+    created() {
+        this.fetchArticles()
+    },
+    methods: {
+        fetchArticles() {
+            fetch('api/projects')
+            .then(res => res.json())
+            .then(res => {
+                this.projects = res;
+            })
+        }
+    }
+}
+</script>

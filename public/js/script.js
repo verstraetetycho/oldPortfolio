@@ -34,6 +34,7 @@ $(window).scroll(function() {
 // https://codepen.io/hi-im-si/pen/uhxFn
 
 $('.counter').each(function() {
+  setTimeout(() => {
     var $this = $(this),
         countTo = $this.attr('data-count');
     
@@ -53,8 +54,8 @@ $('.counter').each(function() {
       }
   
     });
-  
-  });
+  }, 1000);  
+});
 
 // Masonry
 let $grid = $('.grid').masonry({

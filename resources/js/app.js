@@ -23,6 +23,7 @@ Vue.component('navigation', require('./components/Navigation.vue').default);
 Vue.component('projects', require('./components/Projects.vue').default);
 Vue.component('featuredprojects', require('./components/FeaturedProjects.vue').default);
 Vue.component('skillstable', require('./components/SkillsTable.vue').default);
+Vue.component('techform', require('./components/TechForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

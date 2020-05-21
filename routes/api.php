@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/projects', 'ApiController@projects');
 Route::get('/projects/{id}', 'ApiController@project');
 Route::get('/technologies', 'ApiController@technologies');
+Route::get('/technologies/{categ}', 'ApiController@technologieByCateg');
 Route::get('/categories', 'ApiController@categories');

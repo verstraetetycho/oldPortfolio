@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::name('admin.')->group(function () {
             Route::get('/', 'AdminController@index')->name('index');
+            Route::get('/addproject', 'AdminController@addProject')->name('addProject');
+            Route::post('/postproject', 'AdminController@postProject')->name('postproject');
         });
     });
 });

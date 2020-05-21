@@ -33,20 +33,32 @@ export default {
         fetchArticles() {
             let arr = [];
 
-            do {
-            let num = Math.floor(Math.random() * 8 + 1);
-            arr.push(num);
-            arr = arr.filter((item, index) => {
-                return arr.indexOf(item) === index
+            let start;
+            let stop;
+
+            fetch('api/projects')
+            .then(res => res.json())
+            .then(res => {
+                start = res[0].id;
+                stop = start + res.length - 1;
+
+                do {
+                    let num = Math.floor((Math.random() * stop) + start);
+                    arr.push(num);
+                    arr = arr.filter((item, index) => {
+                        return arr.indexOf(item) === index
+                    });
+                } while (arr.length < 3);
             });
-            } while (arr.length < 3);
+                
+            
             
             arr.forEach(element => {
                 fetch(`api/projects/${element}`)
                 .then(res => res.json())
                 .then(res => {
                     this.projects.push(res);
-            })
+                })
             });
             
         }

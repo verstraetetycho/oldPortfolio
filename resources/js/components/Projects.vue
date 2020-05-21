@@ -1,14 +1,20 @@
 <template>
     <div>
-        <div v-for="technologie in technologies" v-bind:key="technologie" class="button-group filter-button-group">
-            <div class="btn filter" :data-filter="technologie">"technologie"</div>       
+        <div class="button-group filter-button-group">
+            <div data-filter="*" class="btn filter is-checked">
+                All     
+            </div>
+            <div v-for="technology in technologies" v-bind:key="technology" class="btn filter" :data-filter="'.' + technology.name.toLowerCase().replace(/\s/g, '')">
+                {{technology.name}}     
+            </div>
         </div>
+        
         <div class="grid">
-            <div v-for="project in projects" v-bind:key="project.id" class="grid-item" :class="project.type">
+            <div v-for="project in projects" v-bind:key="project.id" class="grid-item" :class="project.technologies.toLowerCase().replace(/[^\w\s]/g, '')">
                 <a :href="'portfolio/' + project.titel.toLowerCase().replace(/\s/g, '')">
-                    <img :src="'images/' + project.titel.toLowerCase().replace(/\s/g, '') + '.jpg'" :alt="project.titel">
+                    <img :src="'images/projects/' + project.titel.toLowerCase().replace(/\s/g, '') + '.jpg'" :alt="project.titel">
                 </a>
-                <div class="technologie v-flexer"><ion-icon :name="'logo-' + project.type"></ion-icon> {{project.titel}}</div>
+                <div class="technologie v-flexer">{{project.technologies}}</div>
             </div>
         </div>
     </div>
@@ -28,8 +34,8 @@ export default {
                 url: '',
                 smalldescr: '',
                 descr: '',
-                type: '',
-                company: ''
+                company: '',
+                technologies: ''
             },
             technology: {
                 id: '',
@@ -64,10 +70,10 @@ export default {
             })
         },
         fetchCategories() {
-            fetch('api/technologies')
+            fetch('api/categories')
             .then(res => res.json())
             .then(res => {
-                this.technologies = res;
+                this.categories = res;
             })
         }
     }
