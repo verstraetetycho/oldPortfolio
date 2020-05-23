@@ -6,9 +6,15 @@
             <div id="about-text" class="col-md-6">
                 <h2>Passionate <br> coder <span>-</span> designer</h2>
                 <p>
-                    Unde nihil eius repudiandae sequi quos non velit repellendus. Corrupti sit possimus et quaerat tempora. Illo eaque maxime quam et quia maxime quod. Ex est ad architecto blanditiis.
-                    Alias fugit dolore omnis voluptas perferendis repellat. Vitae dolor dolorem eius inventore dolore. Quia dolorum aliquam excepturi et et ullam. Est et fugiat laborum eos animi harum voluptas.
+                    Hi, my name is <a href="{{route('home')}}">Tycho Verstraete</a>
+                    and I'm a passionated developer/designer from Belgium.
+                    I started getting passionate about programming in high school where I got HTML and CSS. This quickly became my passion and afterwards my studies in college.
+                    For more information about my school career and experiences I would like to refer you to my CV in the button down below.
+                    Make sure you also take a look at my <a href="{{route('portfolio')}}">portfolio</a>
+                    where you can see all my realised projects.
+                    And if you like my projects and you'd like to create something together, feel free to <a href="{{route('contact')}}">contact me</a>. 
                 </p>
+                <button type="button" class="btn btn-danger v-flexer"><ion-icon name="cloud-download-outline"></ion-icon> Download my CV</button>
             </div>
             <div class="col-md-6"><img src="{{ asset('/images/portrait.jpg') }}" alt="foto"></div>
         </div>

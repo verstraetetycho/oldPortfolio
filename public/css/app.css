@@ -363,6 +363,24 @@ body #about-text h2 {
 body #about-text p {
   color: #1a191d;
   font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+body #about-text p a {
+  color: #1a191d;
+  font-weight: bold;
+}
+
+body #about-text p a:hover {
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+body #about-text ion-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
 }
 
 body header {
@@ -553,6 +571,7 @@ body footer {
 
 body footer a {
   color: #1a191d;
+  font-weight: bold;
 }
 
 body footer a:hover {
