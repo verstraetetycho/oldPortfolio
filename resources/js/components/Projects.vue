@@ -4,7 +4,7 @@
             <div data-filter="*" class="btn filter is-checked">
                 All     
             </div>
-            <div v-for="technology in technologies" v-bind:key="technology" class="btn filter" :data-filter="'.' + technology.name.toLowerCase().replace(/\s/g, '')">
+            <div v-for="technology in technologies" v-bind:key="technology.id" class="btn filter" :data-filter="'.' + technology.name.toLowerCase().replace(/\s/g, '')">
                 {{technology.name}}     
             </div>
         </div>

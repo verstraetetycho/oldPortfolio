@@ -1,12 +1,10 @@
 <div id="projects">
     <div class="container">
-    @if (ucfirst(Route::currentRouteName()) == "Home")
-    <featuredprojects></featuredprojects>
-    @else
+        @if (ucfirst(Route::currentRouteName()) == "Home")
+        <featuredprojects></featuredprojects>
+        @else
         <projects></projects>
-    @endif
-        
+        @endif
+
     </div>
 </div>
-
-

@@ -40,7 +40,7 @@ class AdminController extends Controller
         ]);
         DB::table('projects')->insert([
             [
-                'titel' => $request->input('titel'), 
+                'titel' => $request->input('titel'),
                 'year' => $request->input('year'),
                 'url' => $request->input('url'),
                 'smalldescr' => $request->input('smalldescr'),

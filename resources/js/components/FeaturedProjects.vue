@@ -41,8 +41,7 @@ export default {
             .then(res => {
                 start = res[0].id;
                 stop = start + res.length - 1;
-                let verschil = stop - start;
-                // console.log(verschil);
+                let verschil = stop - start + 1;
                 
                 do {
                     let num = Math.floor((Math.random() * verschil) + 0);

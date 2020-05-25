@@ -137,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (res) {
         start = res[0].id;
         stop = start + res.length - 1;
-        var verschil = stop - start; // console.log(verschil);
+        var verschil = stop - start + 1;
 
         do {
           var num = Math.floor(Math.random() * verschil + 0);
@@ -200,19 +200,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       projects: [],
       project: {
-        id: '',
-        titel: '',
-        year: '',
-        url: '',
-        smalldescr: '',
-        descr: '',
-        company: '',
-        technologies: ''
+        id: "",
+        titel: "",
+        year: "",
+        url: "",
+        smalldescr: "",
+        descr: "",
+        company: "",
+        technologies: ""
       }
     };
   },
@@ -223,7 +232,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchArticles: function fetchArticles() {
       var _this = this;
 
-      fetch('api/projects').then(function (res) {
+      fetch("api/projects").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.projects = res;
@@ -354,20 +363,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       technologies: [],
       projects: [],
       project: {
-        id: '',
-        titel: '',
-        year: '',
-        url: '',
-        smalldescr: '',
-        descr: '',
-        type: '',
-        company: ''
+        id: "",
+        titel: "",
+        year: "",
+        url: "",
+        smalldescr: "",
+        descr: "",
+        type: "",
+        company: ""
       }
     };
   },
@@ -378,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchArticles: function fetchArticles() {
       var _this = this;
 
-      fetch('api/projects').then(function (res) {
+      fetch("api/projects").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.projects = res;
@@ -387,7 +411,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchTechnologies: function fetchTechnologies() {
       var _this2 = this;
 
-      fetch('api/technologies').then(function (res) {
+      fetch("api/technologies").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this2.technologies = res;
@@ -422,6 +446,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -432,14 +459,14 @@ __webpack_require__.r(__webpack_exports__);
       },
       categories: [],
       technology: {
-        id: '',
-        name: '',
-        skill_perc: '',
-        type: ''
+        id: "",
+        name: "",
+        skill_perc: "",
+        type: ""
       },
       category: {
-        id: '',
-        type: ''
+        id: "",
+        type: ""
       }
     };
   },
@@ -450,7 +477,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchTechnologies: function fetchTechnologies() {
       var _this = this;
 
-      fetch('api/categories').then(function (res) {
+      fetch("api/categories").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.categories = res;
@@ -459,8 +486,8 @@ __webpack_require__.r(__webpack_exports__);
           fetch("api/technologies/".concat(element.id)).then(function (res) {
             return res.json();
           }).then(function (res) {
-            _this.window['technologies' + element.id] = res;
-            console.log(_this.window['technologies' + element.id]);
+            _this.window["technologies" + element.id] = res;
+            console.log(_this.window["technologies" + element.id]);
           });
         });
       });
@@ -491,20 +518,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       technologies: [],
       categories: [],
       technology: {
-        id: '',
-        name: '',
-        skill_perc: '',
-        type: ''
+        id: "",
+        name: "",
+        skill_perc: "",
+        type: ""
       },
       category: {
-        id: '',
-        type: ''
+        id: "",
+        type: ""
       }
     };
   },
@@ -520,7 +564,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchTechnologies: function fetchTechnologies() {
       var _this = this;
 
-      fetch('../api/technologies').then(function (res) {
+      fetch("../api/technologies").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.technologies = res;
@@ -529,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchCategories: function fetchCategories() {
       var _this2 = this;
 
-      fetch('../api/categories').then(function (res) {
+      fetch("../api/categories").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this2.categories = res;
@@ -1134,17 +1178,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", [_vm._v("Hello"), _c("span", [_vm._v(".")])])
+    return _c("h1", [
+      _vm._v("\n        Hello\n        "),
+      _c("span", [_vm._v(".")])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("My name is "),
+      _vm._v("\n        My name is\n        "),
       _c("span", [_vm._v("Tycho Verstraete")]),
       _vm._v(
-        ". I’m a software engineer and a designer, heres is my portfolio. Have a look."
+        ". I’m a software engineer and a designer, heres is my portfolio. Have a look.\n      "
       )
     ])
   },
@@ -1153,11 +1200,15 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "count" }, [
-      _c("h3", { staticClass: "counter", attrs: { "data-count": "60" } }, [
+      _c("h3", { staticClass: "counter", attrs: { "data-count": "0" } }, [
         _vm._v("0")
       ]),
       _vm._v(" "),
-      _c("p", [_vm._v("Earned "), _c("br"), _vm._v(" likes")])
+      _c("p", [
+        _vm._v("\n            Earned\n            "),
+        _c("br"),
+        _vm._v("likes\n          ")
+      ])
     ])
   },
   function() {
@@ -1284,7 +1335,7 @@ var render = function() {
           return _c(
             "div",
             {
-              key: technology,
+              key: technology.id,
               staticClass: "btn filter",
               attrs: {
                 "data-filter":
@@ -1423,7 +1474,7 @@ var render = function() {
                 { staticClass: "technologie v-flexer" },
                 [
                   _c("ion-icon", { attrs: { name: "logo-" + project.type } }),
-                  _vm._v(" " + _vm._s(project.titel))
+                  _vm._v("\n        " + _vm._s(project.titel) + "\n      ")
                 ],
                 1
               )
@@ -1482,11 +1533,7 @@ var render = function() {
               },
               [
                 _c("span", { staticClass: "chart__label" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(technology.name) +
-                      "\n                "
-                  )
+                  _vm._v(_vm._s(technology.name))
                 ])
               ]
             )
@@ -13723,13 +13770,13 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-Vue.component('intro', __webpack_require__(/*! ./components/Intro.vue */ "./resources/js/components/Intro.vue")["default"]);
-Vue.component('navigation', __webpack_require__(/*! ./components/Navigation.vue */ "./resources/js/components/Navigation.vue")["default"]);
-Vue.component('projects', __webpack_require__(/*! ./components/Projects.vue */ "./resources/js/components/Projects.vue")["default"]);
-Vue.component('featuredprojects', __webpack_require__(/*! ./components/FeaturedProjects.vue */ "./resources/js/components/FeaturedProjects.vue")["default"]);
-Vue.component('skillstable', __webpack_require__(/*! ./components/SkillsTable.vue */ "./resources/js/components/SkillsTable.vue")["default"]);
-Vue.component('techform', __webpack_require__(/*! ./components/TechForm.vue */ "./resources/js/components/TechForm.vue")["default"]);
-Vue.component('skillz', __webpack_require__(/*! ./components/Skillz.vue */ "./resources/js/components/Skillz.vue")["default"]);
+Vue.component("intro", __webpack_require__(/*! ./components/Intro.vue */ "./resources/js/components/Intro.vue")["default"]);
+Vue.component("navigation", __webpack_require__(/*! ./components/Navigation.vue */ "./resources/js/components/Navigation.vue")["default"]);
+Vue.component("projects", __webpack_require__(/*! ./components/Projects.vue */ "./resources/js/components/Projects.vue")["default"]);
+Vue.component("featuredprojects", __webpack_require__(/*! ./components/FeaturedProjects.vue */ "./resources/js/components/FeaturedProjects.vue")["default"]);
+Vue.component("skillstable", __webpack_require__(/*! ./components/SkillsTable.vue */ "./resources/js/components/SkillsTable.vue")["default"]);
+Vue.component("techform", __webpack_require__(/*! ./components/TechForm.vue */ "./resources/js/components/TechForm.vue")["default"]);
+Vue.component("skillz", __webpack_require__(/*! ./components/Skillz.vue */ "./resources/js/components/Skillz.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -13737,7 +13784,7 @@ Vue.component('skillz', __webpack_require__(/*! ./components/Skillz.vue */ "./re
  */
 
 var app = new Vue({
-  el: '#app'
+  el: "#app"
 });
 
 /***/ }),
