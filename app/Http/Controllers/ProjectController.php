@@ -11,4 +11,9 @@ class ProjectController extends Controller
     {
         return view('pages.portfolio');
     }
+    public function project($project)
+    {
+        $projectZoek = Project::where('titel', $project)->get();
+        return view('pages.project', compact('projectZoek'));
+    }
 }

@@ -18,8 +18,10 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index');
 
 Route::get('/portfolio', 'ProjectController@index')->name('portfolio');
+Route::get('/portfolio/{project}', 'ProjectController@project')->name('project');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::post('/postcontact', 'ContactController@postContact')->name('postcontact');
 
 Route::group(['middleware' => ['auth']], function () {
     // admin routes

@@ -217,13 +217,55 @@ body .banner-intro span {
   font-size: 1.5em;
 }
 
+body .banner-intro .technologie {
+  text-transform: capitalize;
+  border: solid #d90a2c 1px;
+  color: #d90a2c;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+body .project img {
+  width: 80%;
+}
+
+body .project p {
+  margin: 30px 0px;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: #1a191d;
+}
+
 body .filter-button-group {
   width: 100%;
   text-align: center;
 }
 
 body .filter-button-group .is-checked {
+  background: linear-gradient(to left, red, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body .filter-button-group .filter {
+  padding: 0;
+}
+
+body .filter-button-group .filter span {
+  margin: 0 10px;
+  cursor: default;
+}
+
+body #contactForm {
+  padding: 5vh 0;
+}
+
+body #contactForm span {
   color: #d90a2c;
+}
+
+body #contactForm input:not([type=submit]) {
+  color: #17161a;
 }
 
 body .socio-panel {

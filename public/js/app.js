@@ -106,19 +106,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       projects: [],
       project: {
-        id: '',
-        titel: '',
-        year: '',
-        url: '',
-        smalldescr: '',
-        descr: '',
-        type: '',
-        company: ''
+        id: "",
+        titel: "",
+        year: "",
+        url: "",
+        smalldescr: "",
+        descr: "",
+        type: "",
+        company: ""
       }
     };
   },
@@ -132,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
       var arr = [];
       var start;
       var stop;
-      fetch('api/projects').then(function (res) {
+      fetch("api/projects").then(function (res) {
         return res.json();
       }).then(function (res) {
         start = res[0].id;
@@ -274,31 +282,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       technologies: [],
       projects: [],
       categories: [],
+      projTech: new Set(),
       project: {
-        id: '',
-        titel: '',
-        year: '',
-        url: '',
-        smalldescr: '',
-        descr: '',
-        company: '',
-        technologies: ''
+        id: "",
+        titel: "",
+        year: "",
+        url: "",
+        smalldescr: "",
+        descr: "",
+        company: "",
+        technologies: ""
       },
       technology: {
-        id: '',
-        name: '',
-        skill_perc: '',
-        type: ''
+        id: "",
+        name: "",
+        skill_perc: "",
+        type: ""
       },
       category: {
-        id: '',
-        type: ''
+        id: "",
+        type: ""
       }
     };
   },
@@ -309,16 +330,30 @@ __webpack_require__.r(__webpack_exports__);
     fetchArticles: function fetchArticles() {
       var _this = this;
 
-      fetch('api/projects').then(function (res) {
+      fetch("api/projects").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.projects = res;
+        var filtprojlist = [];
+
+        _this.projects.forEach(function (proj) {
+          filtprojlist.push(proj.technologies.split(", "));
+        });
+
+        filtprojlist.forEach(function (filt) {
+          for (var i = 0; i < filt.length; i++) {
+            var element = filt[i];
+
+            _this.projTech.add(element);
+          }
+        });
+        console.log(_this.projTech);
       });
     },
     fetchTechnologies: function fetchTechnologies() {
       var _this2 = this;
 
-      fetch('api/technologies').then(function (res) {
+      fetch("api/technologies").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this2.technologies = res;
@@ -327,7 +362,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchCategories: function fetchCategories() {
       var _this3 = this;
 
-      fetch('api/categories').then(function (res) {
+      fetch("api/categories").then(function (res) {
         return res.json();
       }).then(function (res) {
         _this3.categories = res;
@@ -1081,12 +1116,7 @@ var render = function() {
         [
           _c(
             "a",
-            {
-              attrs: {
-                href:
-                  "portfolio/" + project.titel.toLowerCase().replace(/\s/g, "")
-              }
-            },
+            { attrs: { href: "portfolio/" + project.titel.toLowerCase() } },
             [
               _c("img", {
                 attrs: {
@@ -1328,24 +1358,28 @@ var render = function() {
             staticClass: "btn filter is-checked",
             attrs: { "data-filter": "*" }
           },
-          [_vm._v("\n            All     \n        ")]
+          [_vm._v("All")]
         ),
         _vm._v(" "),
-        _vm._l(_vm.technologies, function(technology) {
+        _vm._l(_vm.projTech, function(x) {
           return _c(
             "div",
             {
-              key: technology.id,
-              staticClass: "btn filter",
+              key: x,
+              staticClass: "btn filter v-in-flexer",
               attrs: {
                 "data-filter":
-                  "." + technology.name.toLowerCase().replace(/\s/g, "")
+                  "." +
+                  x
+                    .toLowerCase()
+                    .replace(/\s/g, "")
+                    .replace(/\(/g, "")
+                    .replace(/\)/g, "")
               }
             },
             [
-              _vm._v(
-                "\n            " + _vm._s(technology.name) + "     \n        "
-              )
+              _c("span", [_vm._v("-")]),
+              _vm._v("\n      " + _vm._s(x) + "\n    ")
             ]
           )
         })
@@ -1367,13 +1401,7 @@ var render = function() {
           [
             _c(
               "a",
-              {
-                attrs: {
-                  href:
-                    "portfolio/" +
-                    project.titel.toLowerCase().replace(/\s/g, "")
-                }
-              },
+              { attrs: { href: "portfolio/" + project.titel.toLowerCase() } },
               [
                 _c("img", {
                   attrs: {
