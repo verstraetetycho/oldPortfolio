@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="row v-flexer">
-            <div class="col-md-6">2018-<?php echo date("Y") ?> | Created by <a href="{{route('home')}}">Tycho Verstraete</a></div>
+            <div class="col-md-6">2017-<?php echo date("Y") ?> | Created by <a href="{{route('home')}}">Tycho Verstraete</a></div>
             <div class="col-md-6">
                 <div class="logos">
                     <a href="https://github.com/verstraetetycho/" target="_blank">

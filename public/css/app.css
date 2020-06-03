@@ -638,3 +638,73 @@ body footer .logos a:hover {
   color: #d90a2c;
 }
 
+@media only screen and (max-width: 1565px) {
+  body h1 {
+    font-size: 10em !important;
+  }
+
+  body h2 {
+    font-size: 4em !important;
+  }
+}
+
+@media only screen and (max-width: 1235px) {
+  header .col-2 span,
+  main .col-md-5 img {
+    display: none !important;
+  }
+
+  .technologie {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  body h1 {
+    font-size: 5em !important;
+  }
+
+  body h2 {
+    font-size: 3em !important;
+  }
+
+  body .grid-item {
+    width: 100% !important;
+  }
+
+  body .col-md-7 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  header .btn-danger {
+    padding: 0 !important;
+  }
+
+  #about-text {
+    margin-bottom: 3em !important;
+  }
+
+  #about-text + .col-md-6 img {
+    width: 100% !important;
+  }
+
+  .container {
+    max-width: 90% !important;
+  }
+
+  .socio-panel {
+    padding: 0 !important;
+  }
+
+  .lines {
+    display: none !important;
+  }
+
+  .contpanel h3 {
+    font-size: 1.5em !important;
+  }
+}
+
