@@ -62,8 +62,6 @@ export default {
           } while (arr.length < 3);
 
           arr.forEach(element => {
-            console.log(element);
-
             fetch(`api/projects/${element}`)
               .then(res => res.json())
               .then(res => {
