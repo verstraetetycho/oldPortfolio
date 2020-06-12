@@ -615,7 +615,7 @@ body {
 @media only screen and (max-width: 1070px) {
     body {
         h1 {
-            font-size: 5em !important;
+            font-size: 4.5em !important;
         }
         h2 {
             font-size: 3em !important;
@@ -651,5 +651,8 @@ body {
     }
     .contpanel h3 {
         font-size: 1.5em !important;
+    }
+    .col-2 {
+        padding: 0 !important;
     }
 }

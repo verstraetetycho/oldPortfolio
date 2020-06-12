@@ -2,6 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <!-- SEO Tags -->
+    <meta name="keywords" content="tycho, verstraete, tycho verstraete, portfolio, software engineer, graphic designer, belgium, website, wordpress, php, js, html, css, login">
+    <meta name="desciption" content="My name is Tycho Verstraete. I’m a software engineer and a designer, heres is my portfolio. Have a look.">
+    <meta name="author" content="Tycho Verstraete">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

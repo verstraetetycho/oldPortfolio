@@ -9,7 +9,6 @@
 
     <title>Tycho Verstraete | Dash</title>
     <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
-    <meta name="theme-color" content="#563d7c">
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>    

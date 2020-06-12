@@ -661,7 +661,7 @@ body footer .logos a:hover {
 
 @media only screen and (max-width: 1070px) {
   body h1 {
-    font-size: 5em !important;
+    font-size: 4.5em !important;
   }
 
   body h2 {
@@ -705,6 +705,10 @@ body footer .logos a:hover {
 
   .contpanel h3 {
     font-size: 1.5em !important;
+  }
+
+  .col-2 {
+    padding: 0 !important;
   }
 }
 
