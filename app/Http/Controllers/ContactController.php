@@ -30,7 +30,7 @@ class ContactController extends Controller
         $message = $request->input('message');
         $headers =  'MIME-Version: 1.0' . "\r\n";
         $headers .= 'From: Contact Form <form@tychoverstraete.be>' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
         $bericht = "<p>Bericht ($subject) van $fname $name via het contactformulier:</p><br><br><p>$message</p><br><br><p>email: $email</p>";
 

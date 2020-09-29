@@ -55,6 +55,9 @@ class Handler extends ExceptionHandler
             if ($code == '404') {
                 return response()->view('other.404');
             }
+            elseif ($code == '403') {
+                return response()->view('other.403');
+            }
         }
         return parent::render($request, $exception);
     }

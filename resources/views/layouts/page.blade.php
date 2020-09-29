@@ -12,7 +12,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Tycho Verstraete | {{ ucfirst(Route::currentRouteName()) }}</title>
+    <title>Tycho Verstraete | 
+        @if(empty(ucfirst(Route::currentRouteName()))) 
+            Error
+        @else
+            {{ ucfirst(Route::currentRouteName()) }}
+        @endif
+    </title>
     <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
 
 
@@ -22,8 +28,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js" defer></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js" defer></script> -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
 
