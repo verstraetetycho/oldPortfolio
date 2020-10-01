@@ -125,3 +125,76 @@ window.addEventListener("resize", function() {
 
     $("#searchUL").css("width", searchbarWidth + "px");
 });
+
+// Lightslider
+
+setTimeout(function() {
+    $(".light-slider").lightSlider({
+        item: 5,
+        autoWidth: false,
+        slideMove: 1, // slidemove will be 1 if loop is true
+        slideMargin: 10,
+
+        addClass: "",
+        mode: "slide",
+        useCSS: true,
+        cssEasing: "ease", //'cubic-bezier(0.25, 0, 0.25, 1)',//
+        easing: "linear", //'for jquery animation',////
+
+        speed: 800, //ms'
+        auto: true,
+        pauseOnHover: true,
+        loop: true,
+        slideEndAnimation: true,
+        pause: 1000,
+
+        keyPress: true,
+        controls: false,
+        prevHtml: "",
+        nextHtml: "",
+
+        rtl: false,
+        adaptiveHeight: false,
+
+        vertical: false,
+        verticalHeight: 500,
+        vThumbWidth: 100,
+
+        thumbItem: 10,
+        pager: true,
+        gallery: false,
+        galleryMargin: 5,
+        thumbMargin: 5,
+        currentPagerPosition: "middle",
+
+        enableTouch: true,
+        enableDrag: true,
+        freeMove: true,
+        swipeThreshold: 40,
+
+        responsive: [
+            {
+                breakpoint: 800,
+                settings: {
+                    item: 3,
+                    slideMove: 1,
+                    slideMargin: 6
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    item: 2,
+                    slideMove: 1
+                }
+            }
+        ],
+
+        onBeforeStart: function(el) {},
+        onSliderLoad: function(el) {},
+        onBeforeSlide: function(el) {},
+        onAfterSlide: function(el) {},
+        onBeforeNextSlide: function(el) {},
+        onBeforePrevSlide: function(el) {}
+    });
+}, 500);

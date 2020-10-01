@@ -10,8 +10,9 @@
                 and I'm a passionate developer/designer from Belgium.
                 I started getting passionate about programming in high school where I got HTML and CSS. This quickly became my passion and afterwards my studies in college.
                 For more information about my school career and experiences I would like to refer you to my linkedin in the button down below.
+                If tou want get a quick overview of <a href="#skills">my skills</a>, please scroll down to the next section of this page.
                 Make sure you also take a look at my <a href="{{route('portfolio')}}">portfolio</a>
-                where you can see all my realised projects.
+                where you can see all my realized projects.
                 And if you like my projects and you'd like to create something together, feel free to <a href="{{route('contact')}}">contact me</a>.
             </p>
             <a href="https://www.linkedin.com/in/tycho-verstraete-a5ab1b174/" target="_blank">
@@ -26,31 +27,7 @@
 <section id="skills" class="dark-back">
     <div class="container">
         <h1>Skills<span>.</span></h1>
-        <div class="skills">
-            <ul class="lines">
-                <li class="line l--25">
-                    <span class="line__label">
-                        25%
-                    </span>
-                </li>
-                <li class="line l--50">
-                    <span class="line__label">
-                        50%
-                    </span>
-                </li>
-                <li class="line l--75">
-                    <span class="line__label">
-                        75%
-                    </span>
-                </li>
-                <li class="line l--100">
-                    <span class="line__label">
-                        100%
-                    </span>
-                </li>
-            </ul>
-            <skillz></skillz>
-        </div>
+        <skillz></skillz>
     </div>
 </section>
 @endsection

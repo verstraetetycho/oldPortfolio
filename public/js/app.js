@@ -114,6 +114,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -216,6 +221,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -259,6 +267,24 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -465,7 +491,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -1129,6 +1154,11 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
+          _c("h5", { staticClass: "titel v-flexer" }, [
+            _c("span", [_vm._v("#")]),
+            _vm._v(" " + _vm._s(project.titel))
+          ]),
+          _vm._v(" "),
           _c("div", { staticClass: "technologie v-flexer" }, [
             _vm._v(_vm._s(project.technologies))
           ])
@@ -1188,17 +1218,15 @@ var render = function() {
                 staticClass: "counter",
                 attrs: { "data-count": new Date().getFullYear() - 2017 }
               },
-              [_vm._v("0")]
+              [_vm._v("\n                        0\n                    ")]
             ),
             _vm._v(" "),
             _c("p", [_vm._v("Years of experience")])
-          ]),
-          _vm._v(" "),
-          _vm._m(2)
+          ])
         ])
       ]),
       _vm._v(" "),
-      _vm._m(3)
+      _vm._m(2)
     ])
   ])
 }
@@ -1207,37 +1235,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", [
-      _vm._v("\n        Hello\n        "),
-      _c("span", [_vm._v(".")])
-    ])
+    return _c("h1", [_vm._v("Hello"), _c("span", [_vm._v(",")])])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("\n        My name is\n        "),
+      _vm._v("\n                My name is\n                "),
       _c("span", [_vm._v("Tycho Verstraete")]),
       _vm._v(
-        ". I’m a software engineer and a designer, heres is my portfolio. Have a look.\n      "
+        ". I’m a software engineer and a\n                designer, heres is my portfolio. Have a look.\n            "
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "count" }, [
-      _c("h3", { staticClass: "counter", attrs: { "data-count": "0" } }, [
-        _vm._v("0")
-      ]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v("\n            Earned\n            "),
-        _c("br"),
-        _vm._v("likes\n          ")
-      ])
     ])
   },
   function() {
@@ -1381,7 +1390,7 @@ var render = function() {
             },
             [
               _c("span", [_vm._v("-")]),
-              _vm._v("\n      " + _vm._s(x) + "\n    ")
+              _vm._v("\n            " + _vm._s(x) + "\n        ")
             ]
           )
         })
@@ -1417,8 +1426,17 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
+            _c("h5", { staticClass: "titel v-flexer" }, [
+              _c("span", [_vm._v("#")]),
+              _vm._v(" " + _vm._s(project.titel) + "\n            ")
+            ]),
+            _vm._v(" "),
             _c("div", { staticClass: "technologie v-flexer" }, [
-              _vm._v(_vm._s(project.technologies))
+              _vm._v(
+                "\n                " +
+                  _vm._s(project.technologies) +
+                  "\n            "
+              )
             ])
           ]
         )
@@ -1541,31 +1559,20 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "charts" },
     _vm._l(_vm.categories, function(category) {
-      return _c("div", { key: category.id, staticClass: "chart chart--dev" }, [
-        _c("span", { staticClass: "chart__title" }, [
-          _vm._v(_vm._s(category.type))
-        ]),
+      return _c("div", { key: category.id }, [
+        _c("h3", [_vm._v(_vm._s(category.type))]),
         _vm._v(" "),
         _c(
-          "ul",
-          { staticClass: "chart--horiz" },
+          "div",
+          { staticClass: "light-slider" },
           _vm._l(_vm.window["technologies" + category.id], function(
             technology
           ) {
             return _c(
-              "li",
-              {
-                key: technology.id,
-                staticClass: "chart__bar",
-                style: "width:" + technology.skill_perc + "%;"
-              },
-              [
-                _c("span", { staticClass: "chart__label" }, [
-                  _vm._v(_vm._s(technology.name))
-                ])
-              ]
+              "div",
+              { key: technology.id, staticClass: "tile v-flexer" },
+              [_c("p", [_vm._v(_vm._s(technology.name))])]
             )
           }),
           0

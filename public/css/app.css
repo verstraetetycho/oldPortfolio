@@ -27,7 +27,11 @@ body h3 {
 }
 
 body h1 span,
-body h2 span {
+body h2 span,
+body h3 span,
+body h4 span,
+body h5 span,
+body h6 span {
   background: linear-gradient(to left, red, #d90a2c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -198,7 +202,7 @@ body .grid .grid-item {
 body .grid .grid-item .technologie {
   text-transform: capitalize;
   position: absolute;
-  top: 30px;
+  bottom: 30px;
   left: 30px;
   border: solid #d90a2c 1px;
   color: #d90a2c;
@@ -209,6 +213,12 @@ body .grid .grid-item .technologie {
 body .grid .grid-item .technologie ion-icon {
   font-size: 1.5em;
   margin-right: 10px;
+}
+
+body .grid .grid-item .titel {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 body .grid .grid-item img {
@@ -337,6 +347,10 @@ body #skills h1 {
   margin-bottom: 5vh;
 }
 
+body #skills h3 {
+  margin: 3vh 0;
+}
+
 body section.dark-back {
   background-color: #1a191d !important;
 }
@@ -360,7 +374,7 @@ body .nav-container {
   position: fixed;
   height: 100vh;
   width: 100%;
-  z-index: 90;
+  z-index: 100;
   background-color: rgba(23, 22, 26, 0.99);
   padding: 70px 0;
 }
@@ -520,6 +534,31 @@ body .btn-danger {
   background: linear-gradient(to left, red, #d90a2c);
 }
 
+body .tile {
+  text-align: center;
+  background: #17161a;
+  height: 200px;
+  margin: 5px;
+  margin-left: auto;
+}
+
+body .tile p {
+  width: 100%;
+  font-size: 1.8em;
+}
+
+body .lSSlideOuter .lSPager.lSpg > li a {
+  background-color: #e7e7e7;
+}
+
+body .lSSlideOuter .lSPager.lSpg > li.active a {
+  background-color: #d90a2c;
+}
+
+body .tile:last-child {
+  margin-right: auto;
+}
+
 body .skills {
   margin-top: 5vh;
   width: 100%;
@@ -529,92 +568,6 @@ body .skills {
 body .skills ul,
 body .skills li {
   list-style: none;
-}
-
-body .lines {
-  height: 100%;
-  width: 100%;
-}
-
-body .line {
-  z-index: 1;
-  height: inherit;
-  width: 2px;
-  position: relative;
-  background: rgba(231, 231, 231, 0.6);
-}
-
-body .line.l--0 {
-  left: 0;
-}
-
-body .line.l--25 {
-  left: 25%;
-}
-
-body .line.l--50 {
-  left: 50%;
-}
-
-body .line.l--75 {
-  left: 75%;
-}
-
-body .line.l--100 {
-  left: calc(100% - 1px);
-}
-
-body .line__label {
-  display: block;
-  width: 100px;
-  text-align: center;
-  position: absolute;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-body .charts {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-body .chart {
-  margin: 30px 0 0;
-}
-
-body .chart:first-child {
-  margin: 0;
-}
-
-body .chart__title {
-  display: block;
-  margin: 0 0 10px;
-  font-size: 2em;
-  font-weight: bold;
-  color: #f8fafc;
-  opacity: 1;
-}
-
-body .chart--horiz {
-  overflow: hidden;
-}
-
-body .chart__bar {
-  height: 30px;
-  margin-bottom: 10px;
-  background: linear-gradient(to left, red, #d90a2c);
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  opacity: 1;
-}
-
-body .chart__label {
-  padding-left: 10px;
-  line-height: 30px;
-  color: #f8fafc;
 }
 
 body .panel-nav {

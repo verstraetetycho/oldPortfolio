@@ -28,7 +28,7 @@
 <div class="contpanel">
     <h3>Like my work? Lets work together!
         <br> You can contact me now!</h3>
-    <a href="{{ route('contact') }}"><button type="button" class="btn btn-danger">Contact me</button></a>
+    <a href="{{ route('contact') }}#contactForm"><button type="button" class="btn btn-danger">Contact me</button></a>
 </div>
 
 @endsection
