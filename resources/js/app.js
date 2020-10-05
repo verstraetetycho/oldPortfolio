@@ -27,6 +27,7 @@ Vue.component(
 Vue.component("skillstable", require("./components/SkillsTable.vue").default);
 Vue.component("techform", require("./components/TechForm.vue").default);
 Vue.component("skillz", require("./components/Skillz.vue").default);
+Vue.component("search", require("./components/Search.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

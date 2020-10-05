@@ -99,7 +99,6 @@ export default {
                             this.projTech.add(element);
                         }
                     });
-                    console.log(this.projTech);
                 });
         },
         fetchTechnologies() {

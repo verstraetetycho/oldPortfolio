@@ -1,639 +1,649 @@
 // Variables
-@import "variables";
+@import 'variables';
 
 *:focus,
 button:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    h1 {
-        font-size: 15em;
+  h1 {
+    font-size: 15em;
+  }
+  h2 {
+    font-size: 5em;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    span {
+      background: linear-gradient(to left, red, $red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    h2 {
-        font-size: 5em;
+  }
+
+  background-color: $light-grey;
+  font-family: Lato-Regular;
+  color: $black;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Lato-Black;
+  }
+
+  .loginContainer {
+    width: 400px;
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+
+  li .page {
+    text-transform: capitalize;
+  }
+
+  .contpanel {
+    margin-top: 2vh;
+    border-top: solid $darker-grey 2px;
+    border-bottom: solid $darker-grey 2px;
+    width: 100%;
+    text-align: center;
+    padding: 10vh 0;
+    button {
+      margin-top: 20px;
+      padding: 15px 40px;
+    }
+  }
+  .more {
+    a {
+      margin-top: 20px;
+      color: $dark;
+      transition: ease-in-out 0.3s;
+      font-size: 1.2em;
+      ion-icon {
+        font-size: 1.5em;
+        margin-right: 5px;
+      }
+      line-height: 1;
+    }
+    a:hover {
+      background: linear-gradient(to left, red, $red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+  }
+
+  #searchUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    overflow-y: scroll;
+    max-height: 50vh;
+  }
+
+  #searchUL li a {
+    border-radius: 4px;
+    border: 1px solid $darker-grey;
+    margin-top: -1px;
+    background-color: $light-grey;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: $black;
+    display: block;
+
+    img {
+      width: 10%;
+    }
+  }
+
+  #searchUL li a:hover:not(.header) {
+    background-color: $darker-grey;
+  }
+
+  .loginForm {
+    input {
+      padding: 25px;
+      background-color: transparent;
+    }
+    input:focus {
+      outline: none !important;
+      border: 1px solid $red;
+      box-shadow: 0 0 5px rgba($color: $red, $alpha: 0.2);
+      background-color: rgba($color: $light-grey, $alpha: 0.7);
+    }
+    button {
+      background: linear-gradient(to left, red, $red);
+      border: $red;
+    }
+    .btn {
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  .intro {
+    padding-top: 25vh;
+    p {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .countgroup {
+      .count {
+        width: 100px;
+        border-top: 1px solid rgba(23, 22, 26, 0.2);
+        padding-top: 25px;
+        margin-right: 25px;
+        float: left;
+        h3 {
+          font-size: 2.3em;
+          display: block;
+          background: linear-gradient(to left, red, $red);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    img {
+      float: right;
+      width: 100%;
+    }
+  }
+
+  .container-lg {
+    max-width: 95%;
+  }
+
+  .container {
+    max-width: 80%;
+  }
+
+  .dark-back {
+    color: $light-grey !important;
+
+    ion-icon {
+      color: $light-grey !important;
+    }
+
+    input {
+      color: $light-grey;
+    }
+  }
+
+  .grid {
+    padding-top: 50px;
+    .grid-item {
+      width: 32%;
+    }
+    .grid-item {
+      position: relative;
+      text-align: center;
+      float: left;
+      padding: 10px;
+      margin: 5px;
+      .technologie {
+        text-transform: capitalize;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        border: solid $red 1px;
+        color: $red;
+        padding: 5px 10px;
+        border-radius: 10px;
+        ion-icon {
+          font-size: 1.5em;
+          margin-right: 10px;
+        }
+      }
+      .titel {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .banner-intro {
+    margin-top: 15vh;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    h1 {
+      font-size: 15em;
+      span {
+        color: $red;
+      }
+    }
+    a {
+      color: $red;
+    }
+    ion-icon,
+    span {
+      font-size: 1.5em;
+    }
+    .technologie {
+      text-transform: capitalize;
+      border: solid $red 1px;
+      color: $red;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+  }
+  .project {
+    img {
+      width: 80%;
+    }
+    p {
+      margin: 30px 0px;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      color: $dark;
+    }
+  }
+  .filter-button-group {
+    width: 100%;
+    text-align: center;
+    .is-checked {
+      background: linear-gradient(to left, red, $red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .filter {
+      padding: 0;
+      span {
+        margin: 0 10px;
+        cursor: default;
+      }
+    }
+  }
+  #contactForm {
+    padding: 5vh 0;
+    padding-top: 10vh;
+    span {
+      color: $red;
+    }
+    input:not([type='submit']) {
+      color: $black;
+    }
+  }
+  .socio-panel {
+    padding: 30px;
+    iframe {
+      width: 100%;
     }
     h3 {
-        font-size: 2.5em;
+      margin-bottom: 25px;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        span {
-            background: linear-gradient(to left, red, $red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    p {
+      font-size: 1.3em;
+
+      ion-icon {
+        font-size: 2em;
+        margin-right: 10px;
+      }
     }
-
-    background-color: $light-grey;
-    font-family: Lato-Regular;
-    color: $black;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: Lato-Black;
+    a {
+      color: $dark;
     }
-
-    .loginContainer {
-        width: 400px;
-        h1 {
-            margin-bottom: 30px;
-        }
+    a:hover {
+      background: linear-gradient(to left, red, $red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
     }
+  }
 
-    .contpanel {
-        margin-top: 2vh;
-        border-top: solid $darker-grey 2px;
-        border-bottom: solid $darker-grey 2px;
-        width: 100%;
-        text-align: center;
-        padding: 10vh 0;
-        button {
-            margin-top: 20px;
-            padding: 15px 40px;
-        }
+  #skills {
+    margin-top: 5vh;
+    padding: 5vh 0;
+    h1 {
+      margin-bottom: 5vh;
     }
-    .more {
-        a {
-            margin-top: 20px;
-            color: $dark;
-            transition: ease-in-out 0.3s;
-            font-size: 1.2em;
-            ion-icon {
-                font-size: 1.5em;
-                margin-right: 5px;
-            }
-            line-height: 1;
-        }
-        a:hover {
-            background: linear-gradient(to left, red, $red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
+    h3 {
+      margin: 3vh 0;
     }
+  }
 
-    #searchUL {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-    }
+  section.dark-back {
+    background-color: $dark !important;
+  }
+  header.dark-back {
+    background-color: $black !important;
+  }
 
-    #searchUL li a {
-        border-radius: 4px;
-        border: 1px solid $darker-grey;
-        margin-top: -1px;
-        background-color: $light-grey;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 18px;
-        color: $black;
-        display: block;
-    }
+  .v-flexer {
+    display: flex;
+    align-items: center;
+  }
+  .v-in-flexer {
+    display: inline-flex;
+    align-items: center;
+  }
 
-    #searchUL li a:hover:not(.header) {
-        background-color: $darker-grey;
-    }
-
-    .loginForm {
-        input {
-            padding: 25px;
-            background-color: transparent;
-        }
-        input:focus {
-            outline: none !important;
-            border: 1px solid $red;
-            box-shadow: 0 0 5px rgba($color: $red, $alpha: 0.2);
-            background-color: rgba($color: $light-grey, $alpha: 0.7);
-        }
-        button {
-            background: linear-gradient(to left, red, $red);
-            border: $red;
-        }
-        .btn {
-            padding: 10px;
-            width: 100%;
-        }
-    }
-
-    .intro {
-        padding-top: 25vh;
-        p {
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-
-        .countgroup {
-            .count {
-                width: 100px;
-                border-top: 1px solid rgba(23, 22, 26, 0.2);
-                padding-top: 25px;
-                margin-right: 25px;
-                float: left;
-                h3 {
-                    font-size: 2.3em;
-                    display: block;
-                    background: linear-gradient(to left, red, $red);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-        }
-
-        img {
-            float: right;
-            width: 100%;
-        }
-    }
+  .nav-container {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba($color: $black, $alpha: 0.99);
+    padding: 70px 0;
 
     .container-lg {
-        max-width: 95%;
+      z-index: 92;
+      position: fixed;
+      top: 5vh;
+      left: 50px;
     }
 
-    .container {
-        max-width: 80%;
-    }
+    .backword {
+      z-index: 91;
+      max-width: 95%;
+      margin: auto;
+      position: fixed;
+      top: 0;
 
-    .dark-back {
-        color: $light-grey !important;
-
-        ion-icon {
-            color: $light-grey !important;
-        }
-
-        input {
-            color: $light-grey;
-        }
-    }
-
-    .grid {
-        padding-top: 50px;
-        .grid-item {
-            width: 32%;
-        }
-        .grid-item {
-            position: relative;
-            text-align: center;
-            float: left;
-            padding: 10px;
-            margin: 5px;
-            .technologie {
-                text-transform: capitalize;
-                position: absolute;
-                bottom: 30px;
-                left: 30px;
-                border: solid $red 1px;
-                color: $red;
-                padding: 5px 10px;
-                border-radius: 10px;
-                ion-icon {
-                    font-size: 1.5em;
-                    margin-right: 10px;
-                }
-            }
-            .titel {
-                position: absolute;
-                top: 30px;
-                left: 30px;
-            }
-            img {
-                width: 100%;
-            }
-        }
-    }
-    .grid:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    .banner-intro {
-        margin-top: 15vh;
-        padding: 2em 0;
-        margin-bottom: 2em;
-        h1 {
-            font-size: 15em;
-            span {
-                color: $red;
-            }
-        }
-        a {
-            color: $red;
-        }
-        ion-icon,
-        span {
-            font-size: 1.5em;
-        }
-        .technologie {
-            text-transform: capitalize;
-            border: solid $red 1px;
-            color: $red;
-            padding: 5px 10px;
-            border-radius: 10px;
-        }
-    }
-    .project {
-        img {
-            width: 80%;
-        }
-        p {
-            margin: 30px 0px;
-            font-size: 1.2em;
-            line-height: 1.6em;
-            color: $dark;
-        }
-    }
-    .filter-button-group {
-        width: 100%;
-        text-align: center;
-        .is-checked {
-            background: linear-gradient(to left, red, $red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .filter {
-            padding: 0;
-            span {
-                margin: 0 10px;
-                cursor: default;
-            }
-        }
-    }
-    #contactForm {
-        padding: 5vh 0;
-        padding-top: 10vh;
-        span {
-            color: $red;
-        }
-        input:not([type="submit"]) {
-            color: $black;
-        }
-    }
-    .socio-panel {
-        padding: 30px;
-        iframe {
-            width: 100%;
-        }
-        h3 {
-            margin-bottom: 25px;
-        }
-
-        p {
-            font-size: 1.3em;
-
-            ion-icon {
-                font-size: 2em;
-                margin-right: 10px;
-            }
-        }
-        a {
-            color: $dark;
-        }
-        a:hover {
-            background: linear-gradient(to left, red, $red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
-    }
-
-    #skills {
-        margin-top: 5vh;
-        padding: 5vh 0;
-        h1 {
-            margin-bottom: 5vh;
-        }
-        h3 {
-            margin: 3vh 0;
-        }
-    }
-
-    section.dark-back {
-        background-color: $dark !important;
-    }
-    header.dark-back {
-        background-color: $black !important;
-    }
-
-    .v-flexer {
-        display: flex;
-        align-items: center;
-    }
-    .v-in-flexer {
-        display: inline-flex;
-        align-items: center;
-    }
-
-    .nav-container {
-        display: none;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        z-index: 100;
-        background-color: rgba($color: $black, $alpha: 0.99);
-        padding: 70px 0;
-
-        .container-lg {
-            z-index: 92;
-            position: fixed;
-            top: 5vh;
-            left: 50px;
-        }
-
-        .backword {
-            z-index: 91;
-            max-width: 95%;
-            margin: auto;
-            position: fixed;
-            top: 0;
-
-            p {
-                font-size: 48em;
-                letter-spacing: 0.1em;
-                font-family: Lato-Black;
-                color: rgba($color: $light-grey, $alpha: 0.05);
-                line-height: normal;
-                transition: all ease-in-out 0.3s;
-            }
-        }
-
-        ion-icon {
-            font-size: 2em;
-            color: $light-grey;
-            border: solid transparent 1px;
-            border-radius: 50%;
-            padding: 10px;
-            transition: ease-in-out 0.3s;
-            cursor: pointer;
-        }
-
-        ion-icon:hover {
-            border: solid $red 1px;
-        }
-        ul {
-            margin-top: 15vh;
-            padding: 0;
-
-            li {
-                list-style-type: none;
-                padding-bottom: 1em;
-
-                a {
-                    font-family: Lato-Black;
-                    text-decoration: none;
-                    color: rgba($color: $light-grey, $alpha: 0.5);
-                    font-size: 3em;
-                    transition: all ease-in-out 0.3s;
-                }
-                a:hover {
-                    padding-left: 20px;
-                    color: $red;
-                }
-            }
-        }
-    }
-
-    #about-text {
-        h2 {
-            margin-bottom: 50px;
-        }
-        p {
-            color: $dark;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-
-            a {
-                color: $dark;
-                font-weight: bold;
-            }
-            a:hover {
-                background: linear-gradient(to left, red, $red);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-decoration: none;
-            }
-        }
-        ion-icon {
-            font-size: 1.5em;
-            margin-right: 10px;
-        }
-    }
-
-    header {
-        position: fixed;
-        width: 100%;
-        padding: 45px 0;
+      p {
+        font-size: 48em;
+        letter-spacing: 0.1em;
+        font-family: Lato-Black;
+        color: rgba($color: $light-grey, $alpha: 0.05);
+        line-height: normal;
         transition: all ease-in-out 0.3s;
-        z-index: 3;
-        input[type="text"] {
-            font-family: Lato-Black;
-            width: 100%;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: transparent;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-        .menup ion-icon {
-            font-size: 2em;
-            color: $black;
-            border: solid transparent 1px;
-            border-radius: 50%;
-            padding: 10px;
-            transition: ease-in-out 0.3s;
-            cursor: pointer;
-        }
-        .menup ion-icon:hover {
-            border: solid $red 1px;
-        }
-        span {
-            font-family: Lato-Black;
-        }
+      }
+    }
+
+    ion-icon {
+      font-size: 2em;
+      color: $light-grey;
+      border: solid transparent 1px;
+      border-radius: 50%;
+      padding: 10px;
+      transition: ease-in-out 0.3s;
+      cursor: pointer;
+    }
+
+    ion-icon:hover {
+      border: solid $red 1px;
+    }
+    ul {
+      margin-top: 15vh;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        padding-bottom: 1em;
+
         a {
-            color: $dark;
+          font-family: Lato-Black;
+          text-decoration: none;
+          color: rgba($color: $light-grey, $alpha: 0.5);
+          font-size: 3em;
+          transition: all ease-in-out 0.3s;
         }
         a:hover {
-            text-decoration: none;
-            color: $dark;
+          padding-left: 20px;
+          color: $red;
         }
-        .btn-danger {
-            float: right;
-            max-width: 90%;
-            ion-icon {
-                font-size: 1.5em;
-                padding: 5px 10px;
-            }
-            span {
-                color: $light-grey;
-                padding: 0 10px;
-                border-left: solid rgba($color: $light-grey, $alpha: 0.5) 1px;
-            }
-        }
+      }
+    }
+  }
+
+  #about-text {
+    h2 {
+      margin-bottom: 50px;
+    }
+    p {
+      color: $dark;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+
+      a {
+        color: $dark;
+        font-weight: bold;
+      }
+      a:hover {
+        background: linear-gradient(to left, red, $red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+      }
+    }
+    ion-icon {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    padding: 45px 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 3;
+    input[type='text'] {
+      font-family: Lato-Black;
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: transparent;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+    .menup ion-icon {
+      font-size: 2em;
+      color: $black;
+      border: solid transparent 1px;
+      border-radius: 50%;
+      padding: 10px;
+      transition: ease-in-out 0.3s;
+      cursor: pointer;
+    }
+    .menup ion-icon:hover {
+      border: solid $red 1px;
+    }
+    span {
+      font-family: Lato-Black;
+    }
+    a {
+      color: $dark;
+    }
+    a:hover {
+      text-decoration: none;
+      color: $dark;
     }
     .btn-danger {
-        background: linear-gradient(to left, red, $red);
+      float: right;
+      max-width: 90%;
+      ion-icon {
+        font-size: 1.5em;
+        padding: 5px 10px;
+      }
+      span {
+        color: $light-grey;
+        padding: 0 10px;
+        border-left: solid rgba($color: $light-grey, $alpha: 0.5) 1px;
+      }
     }
+  }
+  .btn-danger {
+    background: linear-gradient(to left, red, $red);
+  }
 
-    .tile {
-        text-align: center;
-        background: $black;
-        height: 200px;
-        margin: 5px;
-        margin-left: auto;
-        p {
-            width: 100%;
-            font-size: 1.8em;
-        }
+  .tile {
+    text-align: center;
+    background: $black;
+    height: 200px;
+    margin: 5px;
+    margin-left: auto;
+    p {
+      width: 100%;
+      font-size: 1.8em;
     }
+  }
 
-    .lSSlideOuter .lSPager.lSpg > li a {
-        background-color: $darker-grey;
-    }
+  .lSSlideOuter .lSPager.lSpg > li a {
+    background-color: $darker-grey;
+  }
 
-    .lSSlideOuter .lSPager.lSpg > li.active a {
-        background-color: $red;
-    }
+  .lSSlideOuter .lSPager.lSpg > li.active a {
+    background-color: $red;
+  }
 
-    .tile:last-child {
-        margin-right: auto;
-    }
+  .tile:last-child {
+    margin-right: auto;
+  }
 
-    .skills {
-        margin-top: 5vh;
-        width: 100%;
-        margin: auto;
+  .skills {
+    margin-top: 5vh;
+    width: 100%;
+    margin: auto;
 
-        ul,
-        li {
-            list-style: none;
-        }
+    ul,
+    li {
+      list-style: none;
     }
+  }
 
-    .panel-nav {
-        background-color: $light-grey;
-        padding: 12px 0;
-        box-shadow: 0px 0px 5px rgba($color: $black, $alpha: 0.3);
-    }
+  .panel-nav {
+    background-color: $light-grey;
+    padding: 12px 0;
+    box-shadow: 0px 0px 5px rgba($color: $black, $alpha: 0.3);
+  }
 
-    .panel {
-        height: 100vh;
-    }
-    #projects {
-        overflow: hidden;
-    }
+  .panel {
+    height: 100vh;
+  }
+  #projects {
+    overflow: hidden;
+  }
 
-    footer {
-        margin-top: 2vh;
-        background-color: $darker-grey;
-        clear: both;
-        width: 100%;
-        padding: 30px 0;
-        a {
-            color: $dark;
-            font-weight: bold;
-        }
-        a:hover {
-            background: linear-gradient(to left, red, $red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        div + div {
-            text-align: right;
-        }
-        .logos {
-            font-size: 30px;
-            a {
-                margin-left: 10px;
-            }
-            a:hover {
-                color: $red;
-            }
-        }
+  footer {
+    margin-top: 2vh;
+    background-color: $darker-grey;
+    clear: both;
+    width: 100%;
+    padding: 30px 0;
+    a {
+      color: $dark;
+      font-weight: bold;
     }
+    a:hover {
+      background: linear-gradient(to left, red, $red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    div + div {
+      text-align: right;
+    }
+    .logos {
+      font-size: 30px;
+      a {
+        margin-left: 10px;
+      }
+      a:hover {
+        color: $red;
+      }
+    }
+  }
 }
 
 // ----------------------------------------------------------------------------------------- MQ
 
 @media only screen and (max-width: 1565px) {
-    body {
-        h1 {
-            font-size: 10em !important;
-        }
-        h2 {
-            font-size: 4em !important;
-        }
+  body {
+    h1 {
+      font-size: 10em !important;
     }
+    h2 {
+      font-size: 4em !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 1235px) {
-    header .col-2 span,
-    main .col-md-5 img {
-        display: none !important;
-    }
-    .technologie {
-        display: none !important;
-    }
+  header .col-2 span,
+  main .col-md-5 img {
+    display: none !important;
+  }
+  .technologie {
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 1070px) {
-    body {
-        h1 {
-            font-size: 4.5em !important;
-        }
-        h2 {
-            font-size: 3em !important;
-        }
-        .grid-item {
-            width: 100% !important;
-        }
-        .col-md-7 {
-            flex: 0 0 100% !important;
-            max-width: 100% !important;
-        }
+  body {
+    h1 {
+      font-size: 4.5em !important;
     }
+    h2 {
+      font-size: 3em !important;
+    }
+    .grid-item {
+      width: 100% !important;
+    }
+    .col-md-7 {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 766px) {
-    header .btn-danger {
-        padding: 0 !important;
-    }
-    #about-text {
-        margin-bottom: 3em !important;
-    }
-    #about-text + .col-md-6 img {
-        width: 100% !important;
-    }
-    .container {
-        max-width: 90% !important;
-    }
-    .socio-panel {
-        padding: 0 !important;
-    }
-    .lines {
-        display: none !important;
-    }
-    .contpanel h3 {
-        font-size: 1.5em !important;
-    }
-    .col-2 {
-        padding: 0 !important;
-    }
+  header .btn-danger {
+    padding: 0 !important;
+  }
+  #about-text {
+    margin-bottom: 3em !important;
+  }
+  #about-text + .col-md-6 img {
+    width: 100% !important;
+  }
+  .container {
+    max-width: 90% !important;
+  }
+  .socio-panel {
+    padding: 0 !important;
+  }
+  .lines {
+    display: none !important;
+  }
+  .contpanel h3 {
+    font-size: 1.5em !important;
+  }
+  .col-2 {
+    padding: 0 !important;
+  }
 }

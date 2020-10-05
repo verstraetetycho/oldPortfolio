@@ -54,6 +54,10 @@ body .loginContainer h1 {
   margin-bottom: 30px;
 }
 
+body li .page {
+  text-transform: capitalize;
+}
+
 body .contpanel {
   margin-top: 2vh;
   border-top: solid #e7e7e7 2px;
@@ -93,6 +97,8 @@ body #searchUL {
   padding: 0;
   margin: 0;
   position: absolute;
+  overflow-y: scroll;
+  max-height: 50vh;
 }
 
 body #searchUL li a {
@@ -105,6 +111,10 @@ body #searchUL li a {
   font-size: 18px;
   color: #17161a;
   display: block;
+}
+
+body #searchUL li a img {
+  width: 10%;
 }
 
 body #searchUL li a:hover:not(.header) {

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div id="about-text" class="col-md-6">
-            <h2>Passionate <br> coder <span>-</span> designer</h2>
+            <h2>Passionate <br> coder <span>&</span> designer</h2>
             <p>
                 Hi, my name is <a href="{{route('home')}}">Tycho Verstraete</a>
                 and I'm a passionate developer/designer from Belgium.
