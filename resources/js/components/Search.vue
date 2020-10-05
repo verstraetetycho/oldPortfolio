@@ -2,7 +2,11 @@
   <ul id="searchUL">
     <li v-for="project in projects" v-bind:key="project.titel">
       <a
-        :href="'portfolio/' + project.titel.toLowerCase().replace(/\s/g, '%20')"
+        :href="
+          appURL +
+            '/portfolio/' +
+            project.titel.toLowerCase().replace(/\s/g, '%20')
+        "
       >
         <strong>Project: </strong>{{ project.titel }}
       </a>
@@ -17,6 +21,7 @@
 export default {
   data() {
     return {
+      appURL: process.env.MIX_APP_URL,
       projects: [],
       project: {
         id: '',
@@ -36,7 +41,7 @@ export default {
   },
   methods: {
     fetchArticles() {
-      fetch('api/projects')
+      fetch(this.appURL + '/api/projects')
         .then((res) => res.json())
         .then((res) => {
           this.projects = res

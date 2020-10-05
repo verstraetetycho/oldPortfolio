@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-window.Vue = require("vue");
+window.Vue = require('vue')
 
 /**
  * The following block of code may be used to automatically register your
@@ -17,17 +17,17 @@ window.Vue = require("vue");
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component("intro", require("./components/Intro.vue").default);
-Vue.component("navigation", require("./components/Navigation.vue").default);
-Vue.component("projects", require("./components/Projects.vue").default);
+Vue.component('intro', require('./components/Intro.vue').default)
+Vue.component('navigation', require('./components/Navigation.vue').default)
+Vue.component('projects', require('./components/Projects.vue').default)
 Vue.component(
-    "featuredprojects",
-    require("./components/FeaturedProjects.vue").default
-);
-Vue.component("skillstable", require("./components/SkillsTable.vue").default);
-Vue.component("techform", require("./components/TechForm.vue").default);
-Vue.component("skillz", require("./components/Skillz.vue").default);
-Vue.component("search", require("./components/Search.vue").default);
+  'featuredprojects',
+  require('./components/FeaturedProjects.vue').default
+)
+Vue.component('skillstable', require('./components/SkillsTable.vue').default)
+Vue.component('techform', require('./components/TechForm.vue').default)
+Vue.component('skillz', require('./components/Skillz.vue').default)
+Vue.component('search', require('./components/Search.vue').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -36,5 +36,5 @@ Vue.component("search", require("./components/Search.vue").default);
  */
 
 const app = new Vue({
-    el: "#app"
-});
+  el: '#app'
+})

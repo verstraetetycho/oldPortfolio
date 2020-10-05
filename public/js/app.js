@@ -421,9 +421,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      appURL: "http://localhost/sites/Portfolio/public",
       projects: [],
       project: {
         id: '',
@@ -445,7 +450,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchArticles: function fetchArticles() {
       var _this = this;
 
-      fetch('api/projects').then(function (res) {
+      fetch(this.appURL + '/api/projects').then(function (res) {
         return res.json();
       }).then(function (res) {
         _this.projects = res;
@@ -1557,7 +1562,8 @@ var render = function() {
             {
               attrs: {
                 href:
-                  "portfolio/" +
+                  _vm.appURL +
+                  "/portfolio/" +
                   project.titel.toLowerCase().replace(/\s/g, "%20")
               }
             },
@@ -13951,14 +13957,14 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component("intro", __webpack_require__(/*! ./components/Intro.vue */ "./resources/js/components/Intro.vue")["default"]);
-Vue.component("navigation", __webpack_require__(/*! ./components/Navigation.vue */ "./resources/js/components/Navigation.vue")["default"]);
-Vue.component("projects", __webpack_require__(/*! ./components/Projects.vue */ "./resources/js/components/Projects.vue")["default"]);
-Vue.component("featuredprojects", __webpack_require__(/*! ./components/FeaturedProjects.vue */ "./resources/js/components/FeaturedProjects.vue")["default"]);
-Vue.component("skillstable", __webpack_require__(/*! ./components/SkillsTable.vue */ "./resources/js/components/SkillsTable.vue")["default"]);
-Vue.component("techform", __webpack_require__(/*! ./components/TechForm.vue */ "./resources/js/components/TechForm.vue")["default"]);
-Vue.component("skillz", __webpack_require__(/*! ./components/Skillz.vue */ "./resources/js/components/Skillz.vue")["default"]);
-Vue.component("search", __webpack_require__(/*! ./components/Search.vue */ "./resources/js/components/Search.vue")["default"]);
+Vue.component('intro', __webpack_require__(/*! ./components/Intro.vue */ "./resources/js/components/Intro.vue")["default"]);
+Vue.component('navigation', __webpack_require__(/*! ./components/Navigation.vue */ "./resources/js/components/Navigation.vue")["default"]);
+Vue.component('projects', __webpack_require__(/*! ./components/Projects.vue */ "./resources/js/components/Projects.vue")["default"]);
+Vue.component('featuredprojects', __webpack_require__(/*! ./components/FeaturedProjects.vue */ "./resources/js/components/FeaturedProjects.vue")["default"]);
+Vue.component('skillstable', __webpack_require__(/*! ./components/SkillsTable.vue */ "./resources/js/components/SkillsTable.vue")["default"]);
+Vue.component('techform', __webpack_require__(/*! ./components/TechForm.vue */ "./resources/js/components/TechForm.vue")["default"]);
+Vue.component('skillz', __webpack_require__(/*! ./components/Skillz.vue */ "./resources/js/components/Skillz.vue")["default"]);
+Vue.component('search', __webpack_require__(/*! ./components/Search.vue */ "./resources/js/components/Search.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -13966,7 +13972,7 @@ Vue.component("search", __webpack_require__(/*! ./components/Search.vue */ "./re
  */
 
 var app = new Vue({
-  el: "#app"
+  el: '#app'
 });
 
 /***/ }),
