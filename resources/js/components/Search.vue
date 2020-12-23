@@ -52,7 +52,6 @@ export default {
           filtprojlist.forEach((filt) => {
             for (let i = 0; i < filt.length; i++) {
               const element = filt[i]
-              this.projTech.add(element)
             }
           })
         })
